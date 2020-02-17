@@ -8,6 +8,7 @@ Text Domain: rtaonline
 Version: 1.0.0
 License: GNU General Public License v2 or later
 */
+ 
 
 :root {
   --color-1: #b52383;
@@ -26,10 +27,70 @@ License: GNU General Public License v2 or later
   --type-medium: 500;
   --type-bold: 700;
   --font-family-sans-serif: "Roboto", Roboto, -apple-system, BlinkMacSystemFont,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; 
 }
 
 
+
+/* breackpoints*/
+/* @media (min-width: var(--breakpoint-small)) { }
+@media (min-width: var(--breakpoint-medium)) {}
+@media (min-width: var(--breakpoint-large)) {} */
+
+
+
+ .ui-header, 
+.ui-footer {display: none !important;}  
+
+
+/* UI  --------------------------------- 
+--------------------------------------------  */
+
+/*PAGE TITLES*/
+.ui-title {  display: flex;  flex-direction: column; margin: 30px 0 20px 0; }
+.ui-title--bottom-border::after { content: ""; width: 160px; height: 3px; background: var(--color-3); }
+.ui-title--center,
+.ui-title--center::after { text-align: center; align-items: center; }
+.ui-title__label { color: var(--color-3); font-size: 18px; margin-bottom: 10px; font-weight: var(--type-bold); letter-spacing: 4px;}
+.ui-title__text {   margin-bottom: 30px;  font-size: 23px; }
+
+/* breackpoints*/
+@media (min-width: 576px) {
+  .ui-title__text {  font-size: 33px;  }
+}
+@media (min-width: 992px) {
+  .ui-title__text {  font-size: 43px; }
+}
+@media (min-width: 1200px) {
+  .ui-title__text {  font-size: 53px; }
+}
+
+
+/*PAGE TITLES*/
+.ui-seach{ position: relative;}
+.ui-seach-button,
+.ui-seach-button--close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: transparent; 
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center;
+}
+.ui-seach-button--default{  background-image: url(./images/icon_search--dark.svg);}
+.ui-seach-button--close{ display: none;  background-color: transparent; background-image: url(./images/icon_close--dark.svg); }
+
+.ui-seach-input:focus ~ .ui-seach-button--default{ background-color: #b52383; background-image: url(./images/icon_search--light.svg); }
+.ui-seach-input:focus ~ .ui-seach-button--close {display: none}
+
+
+.ui-seach-input:not(:placeholder-shown):not(:focus) ~ .ui-seach-button--default { display: none; }
+.ui-seach-input:not(:placeholder-shown):not(:focus) ~ .ui-seach-button--close { display: flex; }
+
+.ui-seach-input::placeholder-shown   { }
 
 
 /* ARTIGOS --------------------------------- 
@@ -87,3 +148,62 @@ License: GNU General Public License v2 or later
 
   font-weight: var(--type-regular);
 }
+
+
+
+
+
+/* PROFISSIONAL --------------------------------- 
+--------------------------------------------  */ 
+.encontre-profissional{}
+.encontre-profissional_blockote{ 
+  background-image: url(./images/background_blockote.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 30px 0 0 40px;
+    width: 360px;
+    margin-left: auto;
+    max-width: 100%;
+}
+.encontre-profissional_blockote p{ font-size: 14px;}
+
+.encontre-profissional_search{
+  margin-bottom: 25px;
+    border-radius: 4px;
+    border: 1px solid #9Da0a8;
+    padding: 6px 15px;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+}
+.encontre-profissional_list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.encontre-profissional_item.hidden{display: none; }
+.encontre-profissional_item{  background-color: #eee;  display: grid;
+  grid-template-columns:  1fr;
+  margin-bottom: 6px; 
+  padding: 15px 10px; 
+  border-radius: 6px;
+}
+.encontre-profissional_item span{  
+  /* padding: 10px; */ 
+   display: flex; width: 100%; white-space: nowrap; overflow: hidden;  text-overflow: ellipsis;
+}
+
+.encontre-profissional_item-name{font-size: 16px; font-weight: 600;  }  
+.encontre-profissional_item-phone{ font-size: 16px; font-weight: 600;    }
+.encontre-profissional_item-email{ font-size: 14px;   }
+.encontre-profissional_item-state{ font-size: 14px;  }
+.encontre-profissional_item-city{ font-size: 14px;  }
+
+/* breackpoints*/
+  @media (min-width: 768px) {
+    .encontre-profissional_item{  grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1200px) {
+    .encontre-profissional_item{  grid-template-columns: minmax(263px, 1fr) 1fr 1fr 1fr 1fr; }
+  }
+ 

@@ -1,6 +1,6 @@
 <?php 
 /*
- Template Name: Página: Contato
+ Template Name: Página: Método RTA
 */
 get_header(); ?>
 

@@ -451,37 +451,6 @@ h3 {
   opacity: 1;
 }
 
-/*PAGE TITLES*/
-.ui-title {
-  display: flex;
-  flex-direction: column;
-  margin: 30px 0 20px 0;
-}
-
-.ui-title--bottom-border::after {
-  content: "";
-  width: 160px;
-  height: 3px;
-  background: var(--color-4);
-}
-
-.ui-title--center,
-.ui-title--center::after {
-  text-align: center;
-  align-items: center;
-}
-
-.ui-title__label {
-  color: var(--color-4);
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: var(--type-bold);
-  letter-spacing: 4px;
-}
-.ui-title__text {
-  font-size: 53px;
-  margin-bottom: 30px;
-}
 
 /* FOOTER */
 .ui-footer {

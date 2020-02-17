@@ -1,0 +1,4 @@
+- instalar wordpress
+- adicionar o template rtaonline
+- criar paginas 
+    - contato

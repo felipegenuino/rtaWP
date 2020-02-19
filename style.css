@@ -100,10 +100,9 @@ License: GNU General Public License v2 or later
 .artigos__cards__list {
   list-style: none;
   margin: 0;
-  padding: 0;
-
+  padding: 0; 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33.3%, auto));
+  grid-template-columns: 1fr;
 }
 
 .artigos__cards__item {
@@ -144,11 +143,23 @@ License: GNU General Public License v2 or later
   font-weight: var(--type-medium);
 }
 .artigos__cards__item p {
-  font-size: 14px;
-
+  font-size: 14px; 
   font-weight: var(--type-regular);
 }
 
+
+/* breackpoints*/
+@media (min-width: 768px) {
+  .artigos__cards__list { 
+    grid-template-columns:  1fr 1fr;
+  } 
+}
+
+@media (min-width: 1200px) {
+  .artigos__cards__list { 
+    grid-template-columns: repeat(auto-fit, minmax(33.3%, auto));
+  } 
+}
 
 
 

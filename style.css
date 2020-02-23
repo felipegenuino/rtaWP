@@ -93,6 +93,90 @@ License: GNU General Public License v2 or later
 .ui-seach-input::placeholder-shown   { }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HOME  --------------------------------- 
+--------------------------------------------  */ 
+.depoimentos{ 
+  width: 100%;
+  position: relative; 
+  padding: 60px 0;
+  background-image: url(./images/testimonials-background.svg);
+  background-size: 880px 777px;
+  background-position: right -740px top -300px;
+  background-repeat: no-repeat;
+}
+
+ 
+.depoimento_title{ font-size: 18px;  max-width: 100%; position: absolute; left: 20px; top: 30px; line-height: 1.1;}
+.depoimento_title strong{ font-size: 44px;   display: flex;}
+.depoimento_header{ padding-left: 30px; background-image: url(./images/testimonials-blockote.svg); background-repeat: no-repeat; height: 100px; background-size: 55px; position: relative; width: 460px; margin: 0 auto; max-width: 100%;}
+.depoimento_carousel{  width: 100%;  }
+.depoimento_item{  text-align: center; padding: 0px 20px 40px 20px; }
+.depoimento_image{ width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px;  }
+.depoimento_name{ font-size: 24px; font-weight: 500; margin-bottom: 0px;}
+.depoimento_profissao{font-size: 16px; color: #5D626D; font-weight: 400}
+.depoimento_depoimento{  font-size: 13px;  max-width: 700px;  margin: auto;   }
+.depoimento_dots{}
+.depoimento_dots_item{  border-radius: 50%;  border: 0 !important;  width: 14px !important;  height: 14px !important;  border: 1px solid  #C62D91 !important }
+.depoimento_dots_item.active{background-color: #C62D91}
+
+/* breackpoints*/
+@media (min-width: 425px) { 
+  .depoimentos{ background-position: right -700px top -210px}
+}
+
+@media (min-width: 768px) {
+  .depoimentos{ background-position: right -660px top -150px}
+  .depoimento_header{height: 215px; padding-left: 0; background-size: 215px;  }
+  .depoimento_title{left: 145px; top: 80px; width: 330px;  }
+  .depoimento_title strong{ font-size: 54px;}
+  .depoimento_depoimento{ font-size: 18px;  line-height: 32px;}
+  .depoimento_name{margin-bottom: 20px;}
+  .depoimento_item{ }
+ }
+@media (min-width: 1200px) {
+  .depoimentos{ background-position: right -650px top -120px}
+  .depoimento_item{ }
+ }
+
+
+
+
+
+
+
+
+
 /* ARTIGOS --------------------------------- 
 --------------------------------------------  */
 
@@ -218,3 +302,6 @@ License: GNU General Public License v2 or later
     .encontre-profissional_item{  grid-template-columns: minmax(263px, 1fr) 1fr 1fr 1fr 1fr; }
   }
  
+
+
+

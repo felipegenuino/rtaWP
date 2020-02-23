@@ -165,7 +165,7 @@ License: GNU General Public License v2 or later
   .depoimento_item{ }
  }
 @media (min-width: 1200px) {
-  .depoimentos{ background-position: right -650px top -120px}
+  .depoimentos{ background-position: right -490px top -120px}
   .depoimento_item{ }
  }
 

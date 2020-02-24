@@ -5,44 +5,46 @@
 get_header(); ?>
 
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <article class="w-100 d-flex  flex-column">
 
-                <section >
-                    <h1 class="ui-title ui-title--bottom-border ui-title--center">
-                        <span class="ui-title__text"> <?php the_title(); ?> </span> 
-                    </h1> 
-                </section>
-                <section class="d-flex  ">
-                   <div>
-                    <p><?php the_content(); ?></p>
-                   </div>
 
-                    <div>
-                       <p>Se preferir utilize um dos canais abaixo</p>
 
-                       <div>
-                            <div>
-                                <span>Telefone</span>
-                                <span>48 3223.4233</span>
-                            </div>
-                            <div>
-                                <span>Whatsapp</span>
-                                <span>48 9 9916.4520</span>
-                            </div>
-                       </div>
-                    </div>
-                    
-                </section>
+
+
+<section class="w-100 d-flex flex-column">
+
+
+<div class="container">
+    <div class="row justify-content-lg-center">
+        <div class="col-lg-8">
+        
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
                 
-                    
-                </article>
-            <?php endwhile; else: ?>
-                <div class="artigo">
-                    <h2>Nada Encontrado</h2>
-                    <p>Erro 404</p>
-                    <p>Lamentamos mas não foram encontrados artigos.</p>
-                </div>            
-            <?php endif; ?>
+             
+
+ <div class="col-12">
+                <h1 class="ui-title ui-title--bottom-border ui-title--center">
+                    <span class="ui-title__label">Método RTA</span>
+                    <span class="ui-title__text">  O Método Reequilibrio   <br> Toracoabdominal - RTA   </span> 
+                </h1> 
+                </div>
+
+          
+            <div class="metodo">
+                <?php the_content(); ?> 
+            </div> <!-- //metodo  -->    
+           
+        <?php endwhile; else: ?> 
+        <?php endif; ?>
+
+        </div> <!-- //col-12 -->
+    </div> <!-- //row --> 
+</div> <!-- //container -->
+ 
+</section>
+ 
+
+
+<?php get_template_part('template-parts/equipeRTA/widget'); ?> 
+
 
 <?php get_footer(); ?>

@@ -9,18 +9,14 @@
           </h2> 
       </div>
 
-
-
-    
-
+ 
       <div class="col-12">
         <div class="artigos__cards">
           <ul class="artigos__cards__list">
-           
-          
+            
 
              <?php $args = array(
-                  'post_type' => 'publicacoes',
+                  'post_type' => 'artigos',
                   'posts_per_page'=> 3, 
                   'orderby'  => array( 
                       'ID' => 'DESC' ,
@@ -34,27 +30,8 @@
                             <h3><?php the_title() ?></h3>
                             <em>Escrito por</em>
 
-                            <?php
-
-// check if the repeater field has rows of data
-if( have_rows('acf_publicacoes_repetidor_autor') ):
-
- 	// loop through the rows of data
-    while ( have_rows('acf_publicacoes_repetidor_autor') ) : the_row(); ?>
-
-       <p> <?php the_sub_field('acf_publicacoes_autor');?> </p>
-
- <?php endwhile;
-
-else :
-
-    // no rows found
-
-endif;
-
-?>
-
-
+                            <p> <?php the_field('acf__artigos_autores');?> </p>
+ 
                              
                           </div>
                           <div  class="artigos__cards__item__footer">
@@ -71,7 +48,7 @@ endif;
 
 
  
-          </ul>
+          </ul> 
         </div>
       </div>
 

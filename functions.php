@@ -10,6 +10,8 @@ add_filter('use_block_editor_for_post_type', '__return_false', 10);
 
 
 
+add_theme_support( 'post-thumbnails' );
+
 
 function rta_scripts() { 
     wp_enqueue_style( 'rta-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );

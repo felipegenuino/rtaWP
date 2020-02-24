@@ -1,13 +1,14 @@
 <style>
     /* HERO */
 
-.ui-hero {
+.ui-hero-inner {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   display: flex;
   margin-bottom: 30px;
+  margin-top: 20px;
   flex-direction: column-reverse;
   align-items: center;
 }
@@ -21,7 +22,7 @@
   align-self: center;
 }
 .ui-hero__text {
-  font-size: 48px;
+  font-size: 28px;
   font-weight: var(--type-bold);
   /* color: var(--color-5); */
   color: #42495b;
@@ -30,20 +31,21 @@
 }
 
 .ui-hero__call {
-  margin-top: 20px;
+  margin-top: 0px;
+  font-size: 14px
 }
 .ui-hero__player {
-  width: 627px;
-  height: 383px;
+  width: 257px;
+    height: 151px;
   background-color: #fff;
-  box-shadow: 0 12px 42px 0 rgba(122, 131, 158, 0.2);
+  box-shadow: -11px 9px 11px rgba(122, 131, 158, 0.2);
   border-radius: 20px 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-    overflow: hidden;
-       
+  overflow: hidden;
+  margin-bottom: 10px; 
 }
 
 .ui-hero__player:hover::after{
@@ -78,16 +80,22 @@
   border: none;
    z-index: 2;
 }
+
+
+
 .ui-hero__player__button__icon {
-  width: 157px;
-  height: 157px;
+    width: 97px;
+    height: 97px;
 }
+
+
 .ui-hero__player__button__text {
   font-weight: var(--type-regular);
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-align: center;
+  color: #fff;
   transform: translateY(-20px);
 }
 
@@ -95,12 +103,31 @@
 }
 
 
+
+@media (min-width: 768px) {
+
+.ui-hero__player__button__text { font-size: 14px}
+.ui-hero__player__button__icon { width: 157px;   height: 157px; }  
+.ui-hero__player { width: 337px; height: 243px;} 
+.ui-hero__call { margin-top: 20px; font-size: 14px}
+.ui-hero__text { font-size: 33px;}
+
+.ui-hero-inner{ flex-direction: row; }
+.ui-hero_2c { flex: 0 0 50%;  max-width: 50%;  }
+}
+
+
+
 @media (min-width: 1200px) {
-  .ui-hero{ flex-direction: row; }
-  .ui-hero_2c {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+
+  .ui-hero__player__button__text { font-size: 14px}
+  .ui-hero__player__button__icon { width: 157px;   height: 157px; }  
+  .ui-hero__player {  width: 627px; height: 383px;} 
+  .ui-hero__call {  margin-top: 20px; font-size: 14px}
+  .ui-hero__text {  font-size: 48px;}
+
+  .ui-hero-inner{ flex-direction: row; }
+  .ui-hero_2c { flex: 0 0 50%;  max-width: 50%;  }
 }
 /* end HERO */
 
@@ -108,27 +135,28 @@
 
 
 
-
-<div class="container">  
-    <section class="ui-hero">
-          <div class="ui-hero_2c">  
-              <div class="ui-hero__content">
-                  <h1 class="ui-hero__text">RTA um sucesso no <br> tratamento de doenças<br> respitarórias</h1>
-                  <a class="ui-hero__call btn btn-lg btn-primary rounded-pill" href="<?php bloginfo('url' ) ?>/metodo-rta/" role="button">Conheça o método</a>
-              </div>
-          </div> <!-- // ui-hero_2c -->
-          
-          <div class="ui-hero_2c">
-              <div class="ui-hero__player" style="--hero-player-background: url(<?php bloginfo('template_url'); ?>/template-parts/hero/demo.gif)"> 
-              <button class="ui-hero__player__button"  
-                  data-toggle="modal" 
-                  data-target="#heroModal"
-                  data-video="https://www.youtube.com/embed/Z0hU4QfhBqA?autoplay=1&modestbranding=1"
-                  > 
-                    <img class="ui-hero__player__button__icon" src="<?php bloginfo('template_url'); ?>/template-parts/hero/icon__player.svg" alt="">
-                    <span class="ui-hero__player__button__text" >Assista o VÍDEO</span>
-                 </button> 
-              </div> <!-- // ui-hero__player -->
-        </div> <!-- // ui-hero_2c -->
-    </section><!-- // ui-hero -->
-  </div> <!-- // container -->
+<section class="ui-hero"> 
+    <div class="container">  
+        <div class="ui-hero-inner">
+              <div class="ui-hero_2c">  
+                  <div class="ui-hero__content">
+                      <h1 class="ui-hero__text">RTA um sucesso no <br> tratamento de doenças<br> respitarórias</h1>
+                      <a class="ui-hero__call btn btn-lg btn-primary rounded-pill" href="<?php bloginfo('url' ) ?>/metodo-rta/" role="button">Conheça o método</a>
+                  </div>
+              </div> <!-- // ui-hero_2c -->
+              
+              <div class="ui-hero_2c">
+                  <div class="ui-hero__player" style="--hero-player-background: url(<?php bloginfo('template_url'); ?>/template-parts/hero/demo.gif)"> 
+                  <button class="ui-hero__player__button"  
+                      data-toggle="modal" 
+                      data-target="#heroModal"
+                      data-video="https://www.youtube.com/embed/Z0hU4QfhBqA?autoplay=1&modestbranding=1"
+                      > 
+                        <img class="ui-hero__player__button__icon" src="<?php bloginfo('template_url'); ?>/template-parts/hero/icon__player.svg" alt="">
+                        <span class="ui-hero__player__button__text" >Assista o VÍDEO</span>
+                    </button> 
+                  </div> <!-- // ui-hero__player -->
+            </div> <!-- // ui-hero_2c -->
+          </div><!-- // ui-hero -->
+      </div> <!-- // container -->
+  </section>

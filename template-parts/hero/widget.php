@@ -8,10 +8,12 @@
   padding-left: 15px;
   display: flex;
   margin-bottom: 30px;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 .ui-hero_2c {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 100%;
+  max-width: 100%;
   display: flex;
 }
 
@@ -92,6 +94,14 @@
 .ui-hero.page {
 }
 
+
+@media (min-width: 1200px) {
+  .ui-hero{ flex-direction: row; }
+  .ui-hero_2c {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 /* end HERO */
 
 </style>
@@ -104,7 +114,7 @@
           <div class="ui-hero_2c">  
               <div class="ui-hero__content">
                   <h1 class="ui-hero__text">RTA um sucesso no <br> tratamento de doenças<br> respitarórias</h1>
-                  <a class="ui-hero__call btn btn-lg btn-primary rounded-pill" href="#" role="button">Conheça o método</a>
+                  <a class="ui-hero__call btn btn-lg btn-primary rounded-pill" href="<?php bloginfo('url' ) ?>/metodo-rta/" role="button">Conheça o método</a>
               </div>
           </div> <!-- // ui-hero_2c -->
           

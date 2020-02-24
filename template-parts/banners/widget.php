@@ -56,8 +56,9 @@
 
 
 <div class="container"> 
-<div class="col-12">
-  
+  <div class="row justify-content-lg-center">
+
+    <div class="col-12 col-lg-10">
       <section class="ui-banner">
         <div class="ui-banner__content" >
           <h2>II Encontro Brasileiro de RTA </h2>
@@ -67,6 +68,7 @@
           <a class="btn btn-lg btn-primary rounded-pill" role="button" href="#">Inscreva-se</a>
         </div>
       </section> 
-
-  </div> 
-</div>
+    </div> 
+    
+  </div> <!-- // row -->
+</div> <!-- // container -->

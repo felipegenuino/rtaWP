@@ -10,12 +10,12 @@ get_header(); ?>
 
 
 
-<section class="w-100 d-flex flex-column">
+<section class="metodo  w-100 d-flex flex-column ">
 
 
 <div class="container">
     <div class="row justify-content-lg-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8 metodo_col">
         
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
                 
@@ -29,10 +29,9 @@ get_header(); ?>
                 </div>
 
           
-            <div class="metodo">
+            
                 <?php the_content(); ?> 
-            </div> <!-- //metodo  -->    
-           
+    
         <?php endwhile; else: ?> 
         <?php endif; ?>
 

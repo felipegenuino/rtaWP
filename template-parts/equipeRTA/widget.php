@@ -3,8 +3,18 @@
 
 
 
+
 <div class="container">  
   <div class="row ">
+
+
+  <div class="col-12">
+  <h1 class="ui-title ui-title--bottom-border ui-title--center"> 
+      <span class="ui-title__text"> <span class="ui-title__text--regular">Equipe</span> RTA  </span> 
+  </h1> 
+  </div>
+
+
   <div class="col col-12 ">
 
     <ul class="equipe_list">

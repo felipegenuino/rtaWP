@@ -1,8 +1,20 @@
 <?php if (get_field('acf__case-active'))  {  ?> 
 
+ 
 
+ <section class="case">
+
+
+ 
 
 <style> 
+
+.case {
+    padding: 60px 0;
+    position: relative;
+}
+
+
   .case__widget{}
   .case__widget-list{ 
     justify-content: center;
@@ -104,9 +116,6 @@
   
 </style>
 
-
-
- <section class="case">
  
 <div class="container"> 
   <div class="row"> 

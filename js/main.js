@@ -1,4 +1,8 @@
 $(function() {
+  //startcode
+
+
+  
   $('[data-toggle="tooltip"]').tooltip();
 
   //rodar video no modal
@@ -20,22 +24,9 @@ $(function() {
     $("#heroModal iframe").removeAttr("src allow");
   });
 
-  //slick
+ 
 
-  $(".slick-slide").slick({
-    dots: true,
-    centerMode: true,
-    centerPadding: "60px",
-    slidesToShow: 3
-  });
 
-  $(".slick-slider").on("click", ".slick-slide", function(e) {
-    e.stopPropagation();
-    var index = $(this).index();
-    if ($(".slick-slider").slick("slickCurrentSlide") !== index) {
-      $(".slick-slider").slick("slickGoTo", index);
-    }
-  });
 
   //endcode
 });

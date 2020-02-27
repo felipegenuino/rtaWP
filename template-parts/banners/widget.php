@@ -1,3 +1,6 @@
+<?php if (get_field('acf__banner-active'))  {  ?> 
+
+
 <style>
 /*Banner*/
 .ui-banner {
@@ -49,10 +52,14 @@
 @media (min-width: 1200px) {
   .ui-banenr{ padding: 30px 50px; } 
   .ui-banner__content p {font-size: 22px;  }
-}
-
-
+} 
 </style>
+
+
+
+
+
+ 
 
 
 <div class="container"> 
@@ -61,14 +68,22 @@
     <div class="col-12 col-lg-10">
       <section class="ui-banner">
         <div class="ui-banner__content" >
-          <h2>II Encontro Brasileiro de RTA </h2>
-          <p>de 28 a 30 de novembro 2019 - Rio de Janeiro/RJ</p>
+            <?php if( get_field('acf__banner-title') ): ?>
+              <h2><?php the_field('acf__banner-title'); ?></h2>
+            <?php endif; ?>
+           
+            <?php if( get_field('acf__banner-subtitle') ): ?>
+              <p><?php the_field('acf__banner-subtitle'); ?></p>
+            <?php endif; ?>
         </div>
         <div class="ui-banner__call ">
-          <a class="btn btn-lg btn-primary rounded-pill" role="button" href="#">Inscreva-se</a>
+            <a class="btn btn-lg btn-primary rounded-pill" target="<?php echo (get_field('acf__banner-button-link-new_page')) ? '_blank' : '_self' ?>" role="button" href="<?php the_field('acf__banner-button-link'); ?>"><?php the_field('acf__banner-button-text'); ?></a>
         </div>
       </section> 
     </div> 
     
   </div> <!-- // row -->
 </div> <!-- // container -->
+
+
+<?php }  ?>

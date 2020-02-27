@@ -110,16 +110,14 @@
 .ui-hero__player__button__icon { width: 157px;   height: 157px; }  
 .ui-hero__player { width: 337px; height: 243px;} 
 .ui-hero__call { margin-top: 20px; font-size: 14px}
-.ui-hero__text { font-size: 33px;}
-
+.ui-hero__text { font-size: 33px;} 
 .ui-hero-inner{ flex-direction: row; }
 .ui-hero_2c { flex: 0 0 50%;  max-width: 50%;  }
 }
 
 
 
-@media (min-width: 1200px) {
-
+@media (min-width: 1200px) { 
   .ui-hero__player__button__text { font-size: 14px}
   .ui-hero__player__button__icon { width: 157px;   height: 157px; }  
   .ui-hero__player {  width: 627px; height: 383px;} 

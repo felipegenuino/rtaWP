@@ -1,4 +1,6 @@
  
+<?php if (get_field('acf__depoimentos-active'))  {  ?> 
+
  <section class="depoimentos"> 
 
      <div class="container">
@@ -124,3 +126,4 @@ if( have_rows('acf__depoimentos_repeater') ):  ?>
 
  
  
+<?php }  ?>

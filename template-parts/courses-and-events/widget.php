@@ -22,6 +22,14 @@
     font-size: 12px;
     font-weight: var(--type-regular);
   }
+  .courses-and-events__more {
+    align-items: flex-end;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding-right: 10px;
+}
 </style>
 
 <div class="container"> 
@@ -74,8 +82,7 @@
           $formacaos = implode(" ", $formacao_names); 
           echo    $formacaos;
       } ?> </h5>
- 
-
+  
 
 	                </div>
                   <div class="align-self-center p-2" style="min-width: 150px;">
@@ -96,6 +103,26 @@
 
 
       </ul>
+
+
+ <div class="courses-and-events__more">
+  <?php 
+    $args = array(
+    'post_type' => 'cursos'
+    );
+    $the_query = new WP_Query( $args );
+    $totalpost = $the_query->found_posts; 
+    ?> 
+
+    <?php if($totalpost >= 6) :  ?>  
+    <button type="button" class="btn btn-link "  onclick="location.href='<?php bloginfo('url');?>/cursos/'"   > <i class="fa fa-angle-right"></i> Conheça nossos cursos </button>
+    <?php  else: ?>  
+    <?php  endif; ?> 
+ </div>
+    
+           
+           
+
 
 
       </div>

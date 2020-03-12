@@ -434,3 +434,40 @@ License: GNU General Public License v2 or later
   .equipe_item.equipe_item--default{grid-column: 1 / 4; margin: 0 0 40px 0;}
   .equipe_list{ grid-template-columns: repeat(auto-fit, minmax(33.3%, auto));}
 }
+
+
+
+
+
+/* COURSE  --------------------------------- 
+--------------------------------------------  */ 
+
+
+.course{}
+.course__content-title { 
+  font-size: 24px;
+  font-weight: 600;
+  color: #5D626D;
+  margin-bottom: 10px;
+}
+.course__content {}
+.course__content ul {margin-top: 1rem;}
+.course__content ul li{
+  margin-bottom: 15px;
+  font-size: 16px;
+  position: relative;
+}
+.course__content ul li::before {
+  content: "";
+  background: #9DA0A8;
+  position: absolute;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 6px; 
+}
+
+.course__data-list{ list-style: none;  padding: 0; margin-top: 0 !important;}
+.course__data-item{margin-bottom: 5px !important}
+.course__data-item::before{ display: none;}

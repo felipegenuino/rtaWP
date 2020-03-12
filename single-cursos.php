@@ -83,44 +83,87 @@
                         </div> <!-- // col-12 -->
                     </div> <!-- // row -->
 
-                    <div class="row justify-content-center">
-                        <div class="col-3">
-                                <img class="img-fluid" src=" https://via.placeholder.com/277x206" alt="">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-sm-12 col-lg-3">
+                                <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-study.svg" alt="">
                         </div> <!-- // col-3 -->
-                        <div class="col-6">
-                        <h4>Programa teórico</h4>
-                        <?php the_field('acf__curso-programa_teorico') ?>
+                        <div class="col-sm-12 col-lg-6">
+                            <h4 class="course__content-title">Programa teórico</h4>
+                            <div class="course__content">
+                                <?php the_field('acf__curso-programa_teorico') ?>
+                            </div>
                         </div> <!-- // col-6 -->
                     </div> <!-- // row -->
 
-
-                    <div class="row justify-content-center">
-                        <div class="col-3">
-                                <img class="img-fluid" src=" https://via.placeholder.com/277x206" alt="">
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-sm-12 col-lg-3">
+                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-talk.svg" alt="">
                         </div> <!-- // col-3 -->
-                        <div class="col-6">
-                        <h4>Programa Prático</h4>
-                        <?php the_field('acf__curso-programa_pratico') ?>
+                        <div class="col-sm-12 col-lg-6">
+                            <h4 class="course__content-title">Programa Prático</h4>
+                            <div class="course__content">
+                                <?php the_field('acf__curso-programa_pratico') ?>
+                            </div>
                         </div> <!-- // col-6 -->
                     </div> <!-- // row -->
 
-
-                    <div class="row justify-content-center">
-                        <div class="col-3">
-                                <img class="img-fluid" src=" https://via.placeholder.com/277x206" alt="">
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-sm-12 col-lg-3">
+                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-calendar.svg" alt="">
                         </div> <!-- // col-3 -->
-                        <div class="col-6">
-                        <h4>Datas</h4>
+                        <div class="col-sm-12 col-lg-6">
+                            <h4 class="course__content-title">Datas</h4>
+                            <div class="course__content">
+                                
+<?php if( have_rows('acf__curso-data__repeater') ): ?>
+
+<ul class="course__data-list">
+
+<?php while( have_rows('acf__curso-data__repeater') ): the_row(); 
+
+    // vars
+    $data = get_sub_field('acf__curso-data');
+    $hora = get_sub_field('acf__curso-hora');
+    $ano = get_sub_field('acf__curso-ano');
+
+    ?>
+
+    <li class="course__data-item">
+
+        <?php if( $data ): ?>
+          <strong>  <?php echo $data; ?> </strong> 
+        <?php endif; ?>
+
+        <?php if( $ano ): ?>
+          de  <?php echo $ano; ?>
+        <?php endif; ?>
+
+        <?php if( $hora ): ?>
+           das <?php echo $hora; ?>
+        <?php endif; ?>
+
+        
+
+    </li>
+
+<?php endwhile; ?>
+
+</ul>
+
+<?php endif; ?>
+
+                            </div>
+
+                            <h4 class="course__content-title mt-4 ">Local</h4>
+                            <div class="course__content">
+                                <strong><?php the_field('acf__curso-local') ?> </strong>   <br />
+                               <p> <?php the_field('acf__curso-address') ?> </p> 
+                            </div>
                         </div> <!-- // col-6 -->
                     </div> <!-- // row -->
-
-
-
-                  </div> <!-- // container -->
-
-
  
-</section>
+                  </div> <!-- // container -->
+ </section>
 
                     
                 </main>

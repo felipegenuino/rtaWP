@@ -471,3 +471,54 @@ License: GNU General Public License v2 or later
 .course__data-list{ list-style: none;  padding: 0; margin-top: 0 !important;}
 .course__data-item{margin-bottom: 5px !important}
 .course__data-item::before{ display: none;}
+
+
+.curso__pay{
+  max-width: 450px;
+  margin: 40px 0;
+}
+.curso__pay-box{
+  background: #EEEEEE;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+.curso__pay-badge {
+  position: absolute;
+  top: -10px;
+  background: #00ABBD;
+  padding: 2px 10px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  left: 0;
+}
+.curso__pay-subtitle p {
+  padding: 0;
+  color: #A4A49F;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.curso__pay-button {
+  margin-left: auto;
+}
+.curso__pay-button a{}
+
+.curso__pay-price {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #5D626D;
+  line-height: 1.2;
+}
+
+.curso__pay-price span {
+}
+.curso__pay-price strong {
+  font-size: 24px;
+  font-weight: 600;
+}

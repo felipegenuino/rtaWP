@@ -50,13 +50,29 @@
     </div>
     </li>
 
-    <li>
-      <?php the_field('acf__curso-programa_teorico') ?>
-    </li>
+   <li>
+   <section class="curso__pay"> 
+        <div class="curso__pay-box">
+            <div class="curso__pay-badge">
+                <span>20 VAGAS DISPONÍVEIS </span>
+            </div>
 
-    <li>
-      <?php the_field('acf__curso-programa_pratico') ?>
-    </li>
+            
+                <p class="curso__pay-price">
+                    <strong>12x R$ 180,00 </strong>
+                    <span>à vista R$ 2.500,00</span>
+                </p>
+           <div class="curso__pay-button">
+               <a href="#inscrever-se" class="btn pl-4 pr-4  btn-primary btn-lg rounded-pill" type="button">Inscrever-se</a>
+           </div>
+             
+            
+        </div>
+        <div class="curso__pay-subtitle">
+            <p>ACEITAMOS CARTÃO DE CRÉDITO, TRANSFERÊNCIA BANCÁRIA OU BOLETO</p>
+        </div>
+    </section>
+   </li>
 </ul>
                         
 

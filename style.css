@@ -22,6 +22,7 @@ License: GNU General Public License v2 or later
   --color-9: #e9e9e9;
   --color-10: #eeeeee;
   --color-11: #fafafa;
+  --color-12: #42495B;
   --type-light: 300;
   --type-regular: 400;
   --type-medium: 500;
@@ -47,7 +48,7 @@ License: GNU General Public License v2 or later
 --------------------------------------------  */
 
 /*PAGE TITLES*/
-.ui-title {  display: flex;  flex-direction: column; margin: 30px 0 20px 0; font-weight: 700;}
+.ui-title {  display: flex;  flex-direction: column; margin: 30px 0 20px 0; font-weight: 700; color: var(--color-12);}
 .ui-title--bottom-border::after { content: ""; width: 160px; height: 3px; background: var(--color-3); }
 .ui-title--center,
 .ui-title--center::after { text-align: center; align-items: center; }
@@ -92,9 +93,19 @@ License: GNU General Public License v2 or later
 .ui-seach-input:not(:placeholder-shown):not(:focus) ~ .ui-seach-button--default { display: none; }
 .ui-seach-input:not(:placeholder-shown):not(:focus) ~ .ui-seach-button--close { display: flex; }
 
-.ui-seach-input::placeholder-shown   { }
+.ui-seach-input::placeholder-shown{ }
 
 
+.ui-blockote{ 
+  background-image: url(./images/blockote.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 30px 0 0 40px;
+    width: 360px;
+    margin-left: auto;
+    max-width: 100%;
+}
+.ui-blockote p{ font-size: 14px;}
 
 
 
@@ -163,7 +174,7 @@ License: GNU General Public License v2 or later
  
 .depoimento_title{ font-size: 18px;  max-width: 100%; position: absolute; left: 20px; top: 30px; line-height: 1.1;}
 .depoimento_title strong{ font-size: 44px;   display: flex;}
-.depoimento_header{ padding-left: 30px; background-image: url(./images/testimonials-blockote.svg); background-repeat: no-repeat; height: 100px; background-size: 55px; position: relative; width: 460px; margin: 0 auto; max-width: 100%;}
+.depoimento_header{ padding-left: 30px; background-image: url(./images/blockote.svg); background-repeat: no-repeat; height: 100px; background-size: 55px; position: relative; width: 460px; margin: 0 auto; max-width: 100%;}
 .depoimento_carousel{  width: 100%;  }
 .depoimento_item{  text-align: center; padding: 0px 20px 40px 20px; }
 .depoimento_image{ width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px;  }
@@ -276,16 +287,7 @@ License: GNU General Public License v2 or later
 /* PROFISSIONAL --------------------------------- 
 --------------------------------------------  */ 
 .encontre-profissional{}
-.encontre-profissional_blockote{ 
-  background-image: url(./images/background_blockote.svg);
-    background-repeat: no-repeat;
-    background-position: top left;
-    padding: 30px 0 0 40px;
-    width: 360px;
-    margin-left: auto;
-    max-width: 100%;
-}
-.encontre-profissional_blockote p{ font-size: 14px;}
+
 
 .encontre-profissional_search{
   margin-bottom: 25px;
@@ -396,7 +398,7 @@ License: GNU General Public License v2 or later
 .equipe_list{margin: 40px 0;  list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr;}
 .equipe_item{  display: flex; width: 100%; flex-direction: column; }
 .equipe_item-inner{    display: flex;}
-.equipe_image{ max-width: 100%; margin: 0 auto; display: flex;   }
+.equipe_image{ max-width: 100%; margin: 0 auto; display: flex; transition: all 0.2s linear;  border-radius: 6px;  }
 .equipe_item--default .equipe_image{ height: 295px; }
 .equipe_item--default .equipe_item-resumo{  -webkit-line-clamp: initial; }
 .equipe_image-box{ display: flex; justify-content: center; height: 350px;  max-width: 100%; align-items: center; position: relative;} 

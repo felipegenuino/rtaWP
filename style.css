@@ -28,7 +28,7 @@ License: GNU General Public License v2 or later
   --type-medium: 500;
   --type-bold: 700;
   --font-family-sans-serif: "Roboto", Roboto, -apple-system, BlinkMacSystemFont,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; 
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important ;
 }
 
 
@@ -453,7 +453,10 @@ License: GNU General Public License v2 or later
   margin-bottom: 10px;
 }
 .course__content {}
-.course__content ul {margin-top: 1rem;}
+.course__content ul {
+  margin-top: 1rem;     
+  padding-left: 20px;
+}
 .course__content ul li{
   margin-bottom: 15px;
   font-size: 16px;
@@ -470,7 +473,7 @@ License: GNU General Public License v2 or later
   top: 6px; 
 }
 
-.course__data-list{ list-style: none;  padding: 0; margin-top: 0 !important;}
+.course__data-list{ list-style: none;  padding: 0; margin-top: 0 !important; padding-left: 0 !important;}
 .course__data-item{margin-bottom: 5px !important}
 .course__data-item::before{ display: none;}
 

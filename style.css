@@ -527,3 +527,43 @@ License: GNU General Public License v2 or later
   font-size: 24px;
   font-weight: 600;
 }
+
+.curso__hero{
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.curso__hero > img { 
+  animation:spin 90s linear infinite; 
+} 
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.curso__hero-image:hover img{ transform: scale(1.05);}
+.curso__hero-image{ 
+  position: absolute;
+  top: 50%;
+  box-shadow: 0 12px 42px rgba(122, 131, 158, 1);
+  border-radius: 13px;
+  overflow: hidden;
+  background: #fff;
+  height: 340px;
+  width: 340px;
+  margin-top: -170px;
+  left: 50%;
+  margin-left: -170px;
+}
+
+.curso__hero-image img{ 
+  max-width: 100%;
+    height: auto;
+    transition: all 0.2s linear;
+    transform: scale(1);
+}
+.curso__hero-image--1{
+  margin-top: -110px;
+  margin-left: -240px;
+}
+.curso__hero-image--2{
+  margin-top: -230px;
+    margin-left: -50px;
+}

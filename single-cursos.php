@@ -9,10 +9,32 @@
                 <section>
                 <div class="container">
                     <div class="row">
-                        <div class="col-4">
-                            <img class="img-fluid" src=" https://via.placeholder.com/500x300" alt="">
+                        <div class="col-6">
+                            <div class="curso__hero">
+                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-hero.svg" alt="">
+                                    <div class="curso__hero-image curso__hero-image--1">  
+                                            <?php 
+                                                $image1 = get_field('acf__curso-imagem-1');
+                                                $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                                                if( $image1 ) {
+                                                    echo wp_get_attachment_image( $image1, $size );
+                                                }
+                                                ?>  
+                                    </div>
+
+                                    <div class="curso__hero-image curso__hero-image--2"> 
+                                    <?php 
+                                        $image2 = get_field('acf__curso-imagem-2');
+                                        $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                                        if( $image2 ) {
+                                            echo wp_get_attachment_image( $image2, $size );
+                                        }
+                                        ?>   
+                                    </div>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
+                        <div class="col-6">
                         
                        
 

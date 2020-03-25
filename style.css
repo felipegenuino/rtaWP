@@ -32,15 +32,17 @@ License: GNU General Public License v2 or later
 }
 
 
+::selection {  color: #fff; background: var(--color-3);}
+
 
 /* breackpoints*/
 /* @media (min-width: var(--breakpoint-small)) { }
-@media (min-width: var(--breakpoint-medium)) {}
-@media (min-width: var(--breakpoint-large)) {} */
+   @media (min-width: var(--breakpoint-medium)) {}
+   @media (min-width: var(--breakpoint-large)) {} */
 
 
 
- .ui-header, 
+.ui-header, 
 .ui-footer {display: none !important;}  
 
 
@@ -93,7 +95,7 @@ License: GNU General Public License v2 or later
 .ui-seach-input:not(:placeholder-shown):not(:focus) ~ .ui-seach-button--default { display: none; }
 .ui-seach-input:not(:placeholder-shown):not(:focus) ~ .ui-seach-button--close { display: flex; }
 
-.ui-seach-input::placeholder-shown{ }
+.ui-seach-input::placeholder-shown{}
 
 
 .ui-blockote{ 
@@ -364,6 +366,7 @@ License: GNU General Public License v2 or later
   margin: 20px 0;
 }
 
+  
 @media (min-width: 768px) {
   .metodo h3{ font-size: 24px;} 
 }
@@ -397,8 +400,11 @@ License: GNU General Public License v2 or later
  
 .equipe_list{margin: 40px 0;  list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr;}
 .equipe_item{  display: flex; width: 100%; flex-direction: column; }
+
+.equipe_item:hover .equipe_image{ transform: scale(1.03); }
+
 .equipe_item-inner{    display: flex;}
-.equipe_image{ max-width: 100%; margin: 0 auto; display: flex; transition: all 0.2s linear;  border-radius: 6px;  }
+.equipe_image{ max-width: 100%; margin: 0 auto; display: flex; transition: all 0.2s linear;  border-radius: 6px; transform: scale(1);  }
 .equipe_item--default .equipe_image{ height: 295px; }
 .equipe_item--default .equipe_item-resumo{  -webkit-line-clamp: initial; }
 .equipe_image-box{ display: flex; justify-content: center; height: 350px;  max-width: 100%; align-items: center; position: relative;} 

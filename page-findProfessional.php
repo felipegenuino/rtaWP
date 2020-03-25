@@ -29,12 +29,16 @@ get_header(); ?>
 
                 <section class="d-flex flex-column"> 
                 <div class="container"> 
-                    <div class="row">
-                        <div class="col-12 col-lg-5 ml-lg-auto "> 
-                            <blockquote class="ui-blockote"> 
-                                <p>Se você fez o curso e deseja que seu contato apareça na lista mande um e-mail com seus dados e cópia do certificado para rtaonline@gmail.com</p>
-                            </blockquote>  
-                        </div> 
+                    <div class="row justify-content-lg-center">
+                        <div class="col-10">
+                            <div class="row"> 
+                                <div class="col-12 col-lg-5 ml-lg-auto "> 
+                                    <blockquote class="ui-blockote"> 
+                                        <p>Se você fez o curso e deseja que seu contato apareça na lista mande um e-mail com seus dados e cópia do certificado para rtaonline@gmail.com</p>
+                                    </blockquote>  
+                                </div> 
+                            </div>
+                        </div>
                     </div>
                     <div class="row">  
                             <div class="col-12 col-lg-4 offset-lg-1  "> 

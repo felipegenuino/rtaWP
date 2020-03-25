@@ -488,12 +488,17 @@ License: GNU General Public License v2 or later
   max-width: 450px;
   margin: 40px 0;
 }
+.curso__pay--full{  max-width: 100%;}
+
 .curso__pay-box{
   background: #EEEEEE;
   border-radius: 4px;
   padding: 20px;
   display: flex;
   position: relative;
+  align-items: center;
+  flex-direction: column;
+      text-align: center; 
 }
 
 .curso__pay-badge {
@@ -507,15 +512,24 @@ License: GNU General Public License v2 or later
   font-weight: 500;
   left: 0;
 }
+
+.curso__pay-info{}
+.curso__pay-title{ 
+  color: var(--color-1);
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 700;
+}
 .curso__pay-subtitle p {
   padding: 0;
   color: #A4A49F;
   font-size: 12px;
   margin-top: 12px;
 }
-.curso__pay-button {  margin-left: auto;} 
+.curso__pay-button {   margin-top: 10px;} 
 .curso__pay-price {  margin: 0;  display: flex;  flex-direction: column;  color: #5D626D;  line-height: 1.2;}
 .curso__pay-price strong {  font-size: 24px;  font-weight: 600;}
+.curso__pay-price span { font-size: 14px;}
 
 
 
@@ -566,6 +580,13 @@ License: GNU General Public License v2 or later
 }
 
 
+
+.curso__main .ui-title {}
+.curso__main .ui-title__label{ text-transform: uppercase;}
+.curso__main .ui-title__text{ margin-bottom: 0;  font-size: 34px;  text-transform: uppercase; }
+
+
+
 @media (min-width: 426px) {
 
   .curso__hero{  
@@ -594,21 +615,24 @@ License: GNU General Public License v2 or later
 
 
 @media (min-width: 768px) {
-  .curso__hero-wrapper{ padding: inherit;}
-  
+  .curso__hero-wrapper{ padding: inherit;} 
+  .curso__hero-image{box-shadow: 0 12px 42px rgba(122, 131, 158, 1); } 
+  .curso__main .ui-title__text{ font-size: 48px;}
 
+  .curso__pay-price--horizontal{ flex-direction: row; align-items: center;}
+  .curso__pay-price--horizontal strong {    margin-right: 5px;}
+  .curso__pay-button {  margin-left: auto;   margin-top: 0px;} 
+  .curso__pay-box{ flex-direction: inherit;  text-align: inherit;}
+}
 
-  .curso__hero-image{box-shadow: 0 12px 42px rgba(122, 131, 158, 1); }
- 
-
-
-
+@media (min-width: 992px) {  
+  .curso__hero{  transform: translate(-30px, 0px); }
 }
 
 
-@media (min-width: 1024px) { 
-  .curso__hero{ overflow: unset;    height: inherit;  }
 
+@media (min-width: 1024px) { 
+  .curso__hero{ overflow: unset;    height: inherit;  } 
   .curso__hero-image--2{
     margin-top: -84px;
     margin-left: -200px;
@@ -625,7 +649,7 @@ License: GNU General Public License v2 or later
 }
 
 
-@media (min-width: 1220px) { 
+@media (min-width: 1220px) {  
     .curso__hero-image--2{
       margin-top: -110px;
       margin-left: -240px; 
@@ -647,21 +671,5 @@ License: GNU General Public License v2 or later
 
 
 
-.curso__main .ui-title {}
-.curso__main .ui-title__label{ text-transform: uppercase;}
-.curso__main .ui-title__text{ margin-bottom: 0;  font-size: 34px;  text-transform: uppercase; }
 
-
-@media (min-width: 425px) {}
-
-@media (min-width: 768px) {
-  .curso__main .ui-title__text{ font-size: 48px;}
-}
-
-@media (min-width: 992px) {
-  .curso__main{  padding: 0 40px; }  
-}
-
-@media (min-width: 1200px) {
-
-}
+ 

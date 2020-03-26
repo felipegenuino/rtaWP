@@ -31,6 +31,7 @@ License: GNU General Public License v2 or later
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important ;
 }
 
+a { color: #00ABBD}
 
 ::selection {  color: #fff; background: var(--color-3);}
 
@@ -112,6 +113,35 @@ License: GNU General Public License v2 or later
 
 
 
+.ui-breadcrumb{}
+
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+}
+ 
+.breadcrumb-item+.breadcrumb-item::before {
+  display: inline-block;
+  padding-right: .5rem;
+  color: #6c757d;
+  content: "5";
+}
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: .5rem;
+}
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: .5rem;
+}
 
 
 
@@ -126,10 +156,10 @@ License: GNU General Public License v2 or later
 
 
 
-
-
-
-
+.share-article{}
+.share-article ul{}
+.share-article ul li{}
+.share-article ul li a{}
 
 
 

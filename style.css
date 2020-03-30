@@ -301,8 +301,8 @@ a { color: #00ABBD}
 
 /* breackpoints*/
 @media (min-width: 768px) {
-  .artigos__cards__list {   grid-template-columns:  1fr 1fr;  } 
-  .artigos__cards__item{ min-height: 400px;}
+  /* .artigos__cards__list {   grid-template-columns:  1fr 1fr;  } 
+  .artigos__cards__item{ min-height: 400px;} */
 }
 
 @media (min-width: 1200px) {

@@ -41,7 +41,36 @@ get_header(); ?>
                 while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
 
-                <a href="#" class="artigo__download btn btn-primary" type="button"> <span> Clique aqui para </span> <strong> visualizar artigo completo</strong> </a>
+                <a href="#" class="artigo__download btn btn-primary" type="button" data-toggle="modal" data-target="#modalDownload"> <span> Clique aqui para </span> <strong> visualizar artigo completo</strong> </a>
+                <!-- Modal -->
+                <div class="modal modal--download fade" id="modalDownload" tabindex="-1" role="dialog" aria-labelledby="modalDownloadLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" > 
+                         <h5 class="modal-title" id="modalDownloadLabel">Preencha o formulário abaixo para <br/> visualizar o artigo completo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body "> 
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail1">Seu nome</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Seu nome">
+                            <small class="sr-only" id="nameHelp" class="form-text text-muted">Nome obrigatório</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail1">Seu email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                            <small class="sr-only" id="emailHelp" class="form-text text-muted">Email obrigatório</small>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Não quero ver o artigo</button>
+                        <button type="button" class="btn btn-primary rounded-pill ml-auto">Ver artigo</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
 
                 <div class="artigo__share">
                 <p class="artigo__share-text"><strong>Compartilhe</strong> esse artigo:</p>
@@ -125,6 +154,8 @@ get_header(); ?>
          
   </div>
 </div>
+
+
 
 
 <?php get_footer(); ?>

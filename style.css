@@ -365,7 +365,23 @@ a { color: #00ABBD}
 .artigo__download span{ font-weight: var(--type-light);}
 .artigo__download strong{font-weight: var(--type-bold); text-transform: uppercase;}
 
+.modal--download{}
+.modal--download .modal-dialog{}
+.modal--download .modal-header{  border-bottom: transparent;  padding: 40px 40px 20px 40px; }
+.modal--download .modal-title{ font-weight: var(--type-regular);}
+.modal--download .modal-header .close{position: absolute;  right: 30px;  top: 20px;}
 
+.modal--download .modal-body{ padding: 0px 40px 0px 40px;}
+.modal--download .modal-footer{
+  border-top: 1px solid transparent;
+  justify-content: start;
+  padding: 0px 40px 30px 40px;}
+
+  .modal--download .modal-footer .btn-link{
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
 
 
 

@@ -60,6 +60,7 @@ a { color: #00ABBD}
 .ui-title__text--light{font-weight: 300; }
 .ui-title__text--regular{font-weight: 400; }
  
+ 
 /* breackpoints*/
 @media (min-width: 576px) {
   .ui-title__text {  font-size: 33px;  }
@@ -68,8 +69,17 @@ a { color: #00ABBD}
   .ui-title__text {  font-size: 43px; }
 }
 @media (min-width: 1200px) {
-  .ui-title__text {  font-size: 53px; }
+  .ui-title__text {  font-size: 48px; }
+  .home.ui-title__text {  font-size: 53px; }
 }
+
+
+ 
+.ui-block-title{ position: relative; display: flex;  flex-direction: column;  margin-bottom: 45px; margin-top: 20px;} 
+.ui-block-title--bottom-border::after { content: ""; width: 160px; height: 3px; background: var(--color-3); }  
+ 
+
+
 
 
 /*PAGE TITLES*/
@@ -112,36 +122,41 @@ a { color: #00ABBD}
 
 
 
+.ui-breadcrumb--center{
+  align-items: center;
+  justify-content: center;
+}
 
-.ui-breadcrumb{}
-
-.breadcrumb {
+.ui-breadcrumb{
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: .75rem 1rem;
+  padding: 0.25rem 1rem;
   margin-bottom: 1rem;
-  list-style: none;
-  background-color: #e9ecef;
+  list-style: none; 
   border-radius: .25rem;
+  text-transform: uppercase;
 }
  
-.breadcrumb-item+.breadcrumb-item::before {
+ 
+.ui-breadcrumb-item+.ui-breadcrumb-item::before {
   display: inline-block;
-  padding-right: .5rem;
-  color: #6c757d;
-  content: "5";
+  padding-right: .5rem; 
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f054";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
-.breadcrumb-item.active {
-  color: #6c757d;
+.ui-breadcrumb-item.active {
+  /* color: #6c757d; */
 }
-.breadcrumb-item+.breadcrumb-item {
+.ui-breadcrumb-item+.ui-breadcrumb-item {
   padding-left: .5rem;
+  color: var(--color-3)
 }
-.breadcrumb-item+.breadcrumb-item {
-  padding-left: .5rem;
-}
+ 
 
 
 
@@ -150,16 +165,6 @@ a { color: #00ABBD}
 
 
 
-
-
-
-
-
-
-.share-article{}
-.share-article ul{}
-.share-article ul li{}
-.share-article ul li a{}
 
 
 
@@ -298,7 +303,6 @@ a { color: #00ABBD}
   font-weight: var(--type-regular);
 }
 
-
 /* breackpoints*/
 @media (min-width: 768px) {
   /* .artigos__cards__list {   grid-template-columns:  1fr 1fr;  } 
@@ -312,6 +316,56 @@ a { color: #00ABBD}
     grid-template-columns: repeat(auto-fit, minmax(33.3%, auto));
   } 
 }
+
+
+.artigo__header-meta{ font-size: 24px; color: #9DA0A8; font-style: normal;}
+.artigo__header-authors {  font-size: 14px;  }
+
+@media (min-width: 1200px) {
+  .artigo__header-authors {  width: 600px;   max-width: 100%;  } 
+}
+ 
+
+.artigo__share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 90px 0;
+}
+.artigo__share-text{ margin: 0 15px 0 0; }
+.artigo__share-list{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.artigo__share-item{
+  width: 26px;
+  height: 26px;
+  background: #00abbd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2px;
+} 
+.artigo__share-item--linkedin{ background-color: #0076B7;}
+.artigo__share-item--facebook{ background-color: #39579A;}
+.artigo__share-item--twitter{ background-color: #059FF5;}
+.artigo__share-item--whatsapp{ background-color: #25d366;} 
+.artigo__share-link, .artigo__share-link:hover{ color: #fff; font-size: 13px;}
+ 
+
+.artigo__download{ 
+  font-size: 24px;
+  display: block;
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 12px;}
+.artigo__download span{ font-weight: var(--type-light);}
+.artigo__download strong{font-weight: var(--type-bold); text-transform: uppercase;}
+
+
 
 
 
@@ -646,9 +700,7 @@ a { color: #00ABBD}
 
 @media (min-width: 768px) {
   .curso__hero-wrapper{ padding: inherit;} 
-  .curso__hero-image{box-shadow: 0 12px 42px rgba(122, 131, 158, 1); } 
-  .curso__main .ui-title__text{ font-size: 48px;}
-
+  .curso__hero-image{box-shadow: 0 12px 42px rgba(122, 131, 158, 1); }  
   .curso__pay-price--horizontal{ flex-direction: row; align-items: center;}
   .curso__pay-price--horizontal strong {    margin-right: 5px;}
   .curso__pay-button {  margin-left: auto;   margin-top: 0px;} 
@@ -689,17 +741,3 @@ a { color: #00ABBD}
         margin-left: -50px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

@@ -8,12 +8,12 @@ get_header(); ?>
 
 <div class="container"> 
 
-    <div class="row"> 
-        <div class="col-12">
+    <div class="row justify-content-lg-center"> 
+        <div class="col-xl-9 col-lg-10">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php bloginfo('url') ?>">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Artigos</li>
+                <ol class="ui-breadcrumb ui-breadcrumb--center">
+                    <li class="ui-breadcrumb-item"><a href="<?php bloginfo('url') ?>">Home</a></li>
+                    <li class="ui-breadcrumb-item active" aria-current="page">Artigos</li>
                 </ol>
             </nav>
         </div>
@@ -22,41 +22,42 @@ get_header(); ?>
 
 
 
-<div class="row">  
-    <div class="col-12">
-          <h2 class="ui-title ui-title--bottom-border ui-title--center">
-               <span class="ui-title__text"> <?php the_title() ?></span> 
-          </h2> 
+<div class="row justify-content-lg-center">  
+    <div class="col-xl-9 col-lg-8">
+        <div class="ui-block-title align-items-xl-center justify-content-xl-center  ui-block-title--bottom-border">
+            <h2 class="ui-title__text text-xl-center mb-2">  <?php the_title() ?> </h2> 
+            <em class="artigo__header-meta mb-2">Escrito por</em> 
+            <p class="artigo__header-authors text-xl-center mb-4"> <?php the_field('acf__artigos_autores');?> </p>
+        </div>
       </div>
  </div>
 
 
 
  <div class="row justify-content-lg-center">  
-    <div class="col-8">
+    <div class="col-xl-8 col-lg-8">
         <?php  
             if ( have_posts() ) : 
                 while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
 
-                <a href="" class="btn btn-primary btn-lg btn-block p-3 "> Clique aqui para visualizar artigo completo </a>
+                <a href="#" class="artigo__download btn btn-primary" type="button"> <span> Clique aqui para </span> <strong> visualizar artigo completo</strong> </a>
 
-                <div class="share-article">
-                <p><strong>Compartilhe</strong> esse artigo:</p>
-                <ul>
-                    <li>
-                        <a href="linkedin">linkedin</a>
+                <div class="artigo__share">
+                <p class="artigo__share-text"><strong>Compartilhe</strong> esse artigo:</p>
+                <ul class="artigo__share-list">
+                    <li class="artigo__share-item artigo__share-item--linkedin">
+                        <a href="#" class="artigo__share-link"><i class="fab fa-linkedin-in"></i></a>
                     </li>
-                    <li>
-                        <a href="linkedin">Facebook</a>
+                    <li class="artigo__share-item artigo__share-item--facebook">
+                        <a href="#" class="artigo__share-link"><i class="fab fa-facebook-f"></i></a>
                     </li>
-                    <li>
-                        <a href="linkedin">Twitter</a>
+                    <li class="artigo__share-item artigo__share-item--twitter">
+                        <a href="#" class="artigo__share-link"><i class="fab fa-twitter"></i></a>
                     </li>
-                    <li>
-                        <a href="linkedin">Whatsapp</a>
-                    </li>
-
+                    <li class="artigo__share-item artigo__share-item--whatsapp">
+                        <a href="#" class="artigo__share-link"><i class="fab fa-whatsapp"></i></a>
+                    </li> 
                 </ul>
                 </div>
                 <?php  endwhile;  
@@ -72,7 +73,7 @@ get_header(); ?>
 
 
 
-  <div class="row">    
+ <div class="row justify-content-lg-center">   
       <div class="col-12">
 
       <h2 class="ui-title ui-title--bottom-border ui-title--center">

@@ -162,7 +162,8 @@ a { color: #00ABBD}
 
 
 
-
+.modal-backdrop.show {  opacity: .9; }
+.modal-backdrop {  background-color: #00ABBD;}
 
 
 

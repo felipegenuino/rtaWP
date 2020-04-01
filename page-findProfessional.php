@@ -57,7 +57,8 @@ get_header(); ?>
                     <div class="row justify-content-lg-center">  
                             <div class="col-12 col-lg-10 "> 
                                     <ul class="encontre-profissional_list">
-                                        <li  class="encontre-profissional_item" 
+                                        <li  
+                                        class="encontre-profissional_item" 
                                         data-filter-item 
                                         data-filter-name="adalberto Oliveira" 
                                         data-filter-city="porto alegre"
@@ -111,7 +112,7 @@ get_header(); ?>
 
 
 
-            <script type="text/javascript"> 
+<script type="text/javascript"> 
 
 jQuery( document ).ready( function( $ ) {  
 

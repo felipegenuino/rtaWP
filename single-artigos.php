@@ -13,7 +13,7 @@ get_header(); ?>
             <nav aria-label="breadcrumb">
                 <ol class="ui-breadcrumb ui-breadcrumb--center">
                     <li class="ui-breadcrumb-item"><a href="<?php bloginfo('url') ?>">Home</a></li>
-                    <li class="ui-breadcrumb-item active" aria-current="page">Artigos</li>
+                    <li class="ui-breadcrumb-item"><a href="<?php bloginfo('url') ?>/artigos">Artigos</a></li>
                 </ol>
             </nav>
         </div>

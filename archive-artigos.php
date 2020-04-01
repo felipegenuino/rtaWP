@@ -3,8 +3,8 @@
  
 get_header(); ?>
  
- 
- 
+ <main class="container"> 
+
     <div class="col-12">
       <h2 class="ui-title ui-title--bottom-border ui-title--center">
           <span class="ui-title__label">Conheça</span>
@@ -21,7 +21,7 @@ get_header(); ?>
                 <button class="ui-seach-button ui-seach-button--default" title="Buscar"> </button>
                 <button type="reset" class="ui-seach-button ui-seach-button--close" title="limpar"> </button>
             </div>
-            <!-- <small id="textHelp" class="form-text text-muted">Precisa de ajuda?</small> -->
+            <!-- <small id="textHelp" class="form-text text-muted">Precisa de ajuda?<csmall> -->
         </div>  
      </div>  
  </div>
@@ -45,20 +45,21 @@ get_header(); ?>
                         <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
                  
-                    <li class="artigos__cards__item">
+                    <li class="artigos__cards__item"
+                        data-filter-item 
+                        data-filter-title="<?php the_title() ?>" 
+                        data-filter-authors="<?php the_field('acf__artigos_autores');?>" >
                           <div class="artigos__cards__item__body">
                             <h3><?php the_title() ?></h3>
                             <em>Escrito por</em> 
                             <p> <?php the_field('acf__artigos_autores');?> </p> 
                           </div>
                           <div  class="artigos__cards__item__footer">
-                            <button type="button" class="btn btn-link btn-sm" onclick="location.href='<?php the_permalink() ?>'"> <i class="fa fa-angle-right"></i> Saiba mais</button>
+                            <a type="button" class="btn btn-link btn-sm" href="<?php the_permalink() ?>'"> <i class="fa fa-angle-right"></i> Saiba mais</a>
                           </div>
                         </li>
 
-                 
-                    
-                        
+                  
                         <?php endwhile; else: ?>
                             <div class="artigo">
                                 <h2>Nada Encontrado</h2>
@@ -72,6 +73,8 @@ get_header(); ?>
         </div>
         </div>
                        
-                
+  </main> <!-- container -->  
+        
+
 
 <?php get_footer(); ?>

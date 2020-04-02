@@ -60,6 +60,7 @@ a { color: #00ABBD}
 .ui-title__text--light{font-weight: 300; }
 .ui-title__text--regular{font-weight: 400; }
  
+
  
 /* breackpoints*/
 @media (min-width: 576px) {
@@ -254,6 +255,10 @@ a { color: #00ABBD}
 --------------------------------------------  */
 
 .artigos__cards {}
+
+
+
+
 .artigos__cards__list {
   list-style: none;
   margin: 0;
@@ -276,12 +281,24 @@ a { color: #00ABBD}
   transition: all 0.2s linear;
 }
 
+.artigos__cards__item:focus-within,
 .artigos__cards__item:hover,
 .artigos__cards__item:focus {
   border: 2px solid #fa7c92;
   background: #fff;
   box-shadow: 0 18px 32px 0 rgba(157, 160, 168, 0.5);
 }
+
+.artigos__cards__item a:focus {
+  text-decoration: underline;
+}
+
+ 
+
+.artigos__cards__item:focus-within a:focus {
+  text-decoration: none;
+}
+
 
 .artigos__cards__item h3 {
   font-size: 20px;
@@ -758,3 +775,20 @@ a { color: #00ABBD}
         margin-left: -50px;
     }
 }
+
+
+
+
+.has-edit {
+  border: 1px solid transparent; position: relative;
+}
+
+.has-edit:hover {
+  border: 1px dashed #eee;
+}
+
+
+.has-edit_btn{ font-size: 10px;}
+.has-edit:hover  .has-edit_w-btn{ display: block  ;}
+
+.has-edit_w-btn{ display: none; text-transform: uppercase; position: absolute; background: #eee; left: 0; top: 0; z-index: 1000;}

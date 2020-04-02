@@ -34,7 +34,10 @@
  
 <?php 
    if( get_field('acf__team_default')  ) { ?> 
-        <li class="equipe_item equipe_item--default">
+        <li class="equipe_item equipe_item--default <?php if( current_user_can('editor') || current_user_can('administrator') ) { echo 'has-edit'; }; ?> ">
+              <?php if( current_user_can('editor') || current_user_can('administrator') ) {   
+                        echo edit_post_link( __( 'Editar', 'textdomain' ), '<small class="has-edit_w-btn">', '</small>', null, 'has-edit_btn' );
+              } ?>
             <div class="row justify-content-lg-center align-items-center">
               <div class="col-12 col-lg-4">
                 <div class="equipe_image-box"> 
@@ -55,7 +58,10 @@
     <?php  } else { ?>
 
       
-    <li class="equipe_item">
+    <li class="equipe_item <?php if( current_user_can('editor') || current_user_can('administrator') ) { echo 'has-edit'; }; ?> ">
+              <?php if( current_user_can('editor') || current_user_can('administrator') ) {   
+                        echo edit_post_link( __( 'Editar', 'textdomain' ), '<small class="has-edit_w-btn">', '</small>', null, 'has-edit_btn' );
+              } ?>
               <div class="equipe_image-box">
               <?php get_bloginfo('template_directory') ?>
                 <img class="equipe_image" src="<?php the_field('acf__team_image'); ?>" alt="" >

@@ -16,7 +16,7 @@ get_header(); ?>
                 <section class="d-flex  ">
                     <div class="row row--bt py-4">
                         <div class="col-12 col-lg-6  px-4  py-4">
-                            <h2 class="fs-24">Para entrar em contato preencha o formulário</h2>
+                            <h2 class="fs-24 fw-r">Para entrar em contato preencha o formulário</h2>
                             <p><?php the_content(); ?></p>
                         </div>
 
@@ -40,8 +40,8 @@ get_header(); ?>
                                 </div>
                                 <div class="col-6">
                                     <div class="contato__info">
-                                        <div class="contato__info-icon-wrap">
-                                            <i class="contato__info-icon fas fa-phone-alt"></i>
+                                        <div class="contato__info-icon-wrap"> 
+                                            <i class="contato__info-icon fab fa-whatsapp"></i>
                                         </div>
                                         <div class="contato__info-text-wrap" >
                                             <span class="fs-14 color-6">Whatsapp</span>
@@ -86,6 +86,9 @@ get_header(); ?>
                     </div>
                 </section>
                 
+
+                
+
                     
                 </article>
             <?php endwhile; else: ?>
@@ -95,6 +98,9 @@ get_header(); ?>
                     <p>Lamentamos mas não foram encontrados artigos.</p>
                 </div>            
             <?php endif; ?>
+
+
+            <?php get_template_part('template-parts/courses-and-events/widget'); ?>  
 
             </main> <!-- container -->  
 <?php get_footer(); ?>

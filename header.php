@@ -48,13 +48,13 @@
     </div> <!-- //ui-header__top -->
 
    <div class="d-flex flex-row justify-content-between ui-header__main"> 
+     
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="navbar-brand"> 
         <img src="<?php bloginfo('template_url'); ?>/images/logo_RTA.svg" alt="Logotipo RTA">
       </a> 
       <nav class="ui-header__nav"> 
         <?php
-        wp_nav_menu( array( 
-
+        wp_nav_menu( array(  
         'menu'            => '',
         'container'       => '',
         'container_class' => '',
@@ -71,16 +71,18 @@
         'item_spacing'    => 'preserve',
         'depth'           => 2,
         'walker'          => '',
-        'theme_location'  => 'header-menu',
-
+        'theme_location'  => 'header-menu', 
         ) );
 
        // wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
         ?>
-        <a class="ui-header__cart"  href="#"> 
+        <a href="#" aria-label="Abrir Menu" class="ui-header__menu-mobile" data-toggle="modal" data-target="#modalMenu">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </a>
+        <a class="ui-header__cart"  href="#" > 
           <img src="<?php bloginfo('template_url'); ?>/images/icon__cart.svg" alt="imagem: carrinho de compras">
           <span class="ui-header__cart-alert">2</span>
-      </a>
+        </a>
       </nav> 
     </div> <!-- // ui-header__main -->
 

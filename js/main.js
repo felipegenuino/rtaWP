@@ -24,7 +24,10 @@ $(function() {
     $("#heroModal iframe").removeAttr("src allow");
   });
 
- 
+  // Menu mobile acessivel
+  $('#modalMenu').on('shown.bs.modal', function () {
+    $('#modalMenuLabel').trigger('focus')
+  })
 
 
 

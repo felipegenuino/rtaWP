@@ -39,8 +39,8 @@ add_action( 'wp_enqueue_scripts', 'rta_scripts' );
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Menu do cabeçalho' ),
-      'extra-menu' => __( 'Extra Menu' )
+      'header-menu' => __( 'Menu Principal' ),
+      // 'extra-menu' => __( 'Extra Menu' )
      )
    );
  }

@@ -48,7 +48,44 @@
 
  
 
-
+<!-- Modal Menu -->
+<div class="modal right fade modal__menu" id="modalMenu" tabindex="-1" role="dialog" aria-labelledby="modalMenuLabel" aria-hidden="true">
+  <div class="modal-dialog  modal__menu-dialog " role="document">
+    <div class="modal-content modal__menu-content">
+      <div class="modal-header modal__menu-header">
+        <h5 class="modal-title" id="modalMenuLabel">Menu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+       
+      <?php
+        wp_nav_menu( array(  
+        'menu'            => 'menu',
+        'container'       => 'nav',
+        'container_class' => 'ui-menu_mobile',
+        'container_id'    => '3',
+        'menu_class'      => '',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul aria-label="Lista de páginas"  id="%1$s" class="%2$s">%3$s</ul>',
+        'item_spacing'    => 'preserve',
+        'depth'           => 2,
+        'walker'          => '',
+        'theme_location'  => 'header-menu', 
+        ) ); 
+        ?>
+       
+       
+    </div>
+  </div>
+</div>
 
 
 <?php wp_footer(); ?>

@@ -13,7 +13,7 @@
 
 <!-- Footer -->
 <footer class="ui-footer">
-  <?php get_template_part('template-parts/footer/newslatter/widget'); ?>
+  <?php  get_template_part('template-parts/footer/newslatter/widget'); ?>
   <?php get_template_part('template-parts/footer/nav-info/widget'); ?>
 </footer>
 

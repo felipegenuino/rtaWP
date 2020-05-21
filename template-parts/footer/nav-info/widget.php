@@ -1,25 +1,14 @@
  <section class="ui-footer__nav">
-
-  <style> 
-    .ui-footer__nav { margin-top: 120px; margin-bottom: 30px;}
-    .ui-footer__nav h6{ font-size: 16px; color: var(--color-11); font-weight: var(--type-medium); }
-    .ui-footer__nav ul{ margin: 0;  padding: 0; font-size: 14px;}
-    .ui-footer__nav ul li{ list-style: none; color: var(--color-11) }
-    .ui-footer__nav ul li a{ color: var(--color-11)}
-    .ui-footer__nav__list-icons{ display: flex; flex-direction: row}
-    .ui-footer__nav__list-icons li{}
-    .ui-footer__nav__list-icons li a{ font-size: 18px;  padding-right: 15px;}
-  </style>
-
+ 
    <div class="container">
       <div class="row">
 
-        <div class="col col-md-auto"> 
+        <div class="col-12 col-lg-2 mb-4 col-md-12"> 
           <div class="margin-bottom: 20px"> 
             <img src="<?php bloginfo('template_url'); ?>/images/logo_RTA_light.svg" width="110" height="143" alt="">
           </div>
         </div>
-        <div class="col"> 
+        <div class="col-12 col-lg-2 mb-4 col-md-4"> 
             <h6>Páginas</h6>
             <ul>
               <li><a href="#">Método RTA</a></li>
@@ -28,7 +17,7 @@
               <li><a href="#">Contato</a></li>
             </ul>
         </div>
-        <div class="col"> 
+        <div class="col-12 col-lg-2 mb-4 col-md-4"> 
            <h6>Cursos</h6>
             <ul>
               <li><a href="#">Cursos e eventos</a></li>
@@ -37,7 +26,7 @@
               <li><a href="#">Termos e Condições</a></li>
             </ul>
         </div>
-         <div class="col"> 
+         <div class="col-12 col-lg-2 mb-4 col-md-4"> 
            <h6>Contato</h6>
             <ul>
               <li>48 3233.4233 / 48 9 9916.4520</li>
@@ -55,13 +44,13 @@
               </li>
             </ul>
         </div>
-        <div class="col"> 
+        <div class="col-12 col-lg-3 mb-4"> 
            <h6>Endereço</h6>
             <ul>
               <li>Rua João Mathias Cordeiro, 83,
                   Córrego Grande, Florianópolis
                   Santa Catarina</li>
-              <li><a href="#maps" class="btn btn-link">Ver no google maps</a></li>
+              <li><a href="#maps" class="btn btn-link" aria-label="Abrir em outra página: Ver no google maps"> <i class="fas fa-chevron-right" aria-hidden="true"></i> Ver no google maps</a></li>
                
             </ul>
         </div>

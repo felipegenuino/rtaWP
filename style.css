@@ -296,6 +296,82 @@ a { color: #00ABBD}
 
 
 
+/* FOOTER */
+  
+.ui-footer__nav {  
+  background: #b52383;
+  margin-top: 90px;
+  position: relative;
+}
+
+.ui-footer__nav::before { 
+  display: flex;
+  width: 100%;
+  content: "";
+  background-image: url(images/footer__nav_background-line.svg);
+  position: absolute;
+  top: -50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+ }
+.ui-footer__nav h6{ font-size: 16px; color: var(--color-11); font-weight: var(--type-medium); }
+.ui-footer__nav ul{ margin: 0;  padding: 0; font-size: 14px;}
+.ui-footer__nav ul li{ list-style: none; color: var(--color-11) }
+.ui-footer__nav ul li a{ color: var(--color-11)}
+.ui-footer__nav__list-icons{ display: flex; flex-direction: row}
+.ui-footer__nav__list-icons li{}
+.ui-footer__nav__list-icons li a{ font-size: 18px;  padding-right: 15px;}
+
+
+
+
+.ui-footer__newslatter { margin-top: 100px; margin-bottom: 40px; } 
+.ui-footer__newslatter .input-group{ flex-direction: column;} 
+.ui-footer__newslatter input[type="email"] { 
+  position: relative;
+  z-index: 1; 
+  width: 100%;
+  margin-bottom: 10px;
+} 
+.ui-footer__newslatter button[type="submit"] { 
+  position: relative;
+  z-index: 3;
+  width: 100%;
+} 
+.ui-footer__newslatter h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: var(--type-light);
+}
+
+.ui-footer__newslatter strong {
+  font-weight: var(--type-bold);
+}
+.ui-footer__newslatter form {
+  display: flex;
+  justify-content: center;
+  width: 100%;  
+  margin: 0 auto;
+} 
+
+
+
+/* breackpoints*/
+@media (min-width: 576px) { 
+}
+@media (min-width: 992px) { 
+  .ui-footer__newslatter .input-group{ flex-direction: row;} 
+  .ui-footer__newslatter h2 {  font-size: 38px; }
+  .ui-footer__newslatter form {  width: 560px; } 
+  .ui-footer__newslatter input[type="email"] {  transform: translate(52px, 0px); padding-right: 110px;  margin-bottom: 0px;  width: inherit; } 
+  .ui-footer__newslatter button[type="submit"] { transform: translate(-53px, 0px); width: auto;  } 
+}
+@media (min-width: 1200px) { 
+}
+
+/* end FOOTER  ------------------------------ */
 
 /* UTILITIES  --------------------------------- 
 --------------------------------------------  */

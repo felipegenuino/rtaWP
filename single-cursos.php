@@ -1,11 +1,6 @@
 <?php  get_header(); ?>
-
-
-       
-                <main class="w-100 d-flex  flex-column">
-
-
-
+ 
+ <main class="w-100 d-flex  flex-column">  
                 <section>
                 <div class="container">
                     <div class="row">
@@ -229,7 +224,6 @@
  </section>
 
                     
-                </main>
-            
+                </main> 
 
 <?php get_footer(); ?>

@@ -32,6 +32,9 @@
 }
 </style>
 
+
+ 
+
 <div class="container"> 
   <div class="row"> 
       <div class="col-12">
@@ -45,43 +48,75 @@
     <div class="row"> 
       <div class="col-12">
 
+
+      
+
+
+
+
+
       <ul class="courses-and-events__list row">
-
-
+ 
              <?php $args = array(
-                  'post_type' => 'cursos',
+                  'post_type' => 'product',
                   'posts_per_page'=> 6, 
                   'orderby'  => array( 
                       'ID' => 'DESC' ,
                   ),
                 ); ?>
                         <?php $loop = new WP_Query($args); ?>
-                        <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); 
+                          global $product; 
+                          $product = wc_get_product();
+                        ?> 
 
 
+
+ 
 
         <li class="courses-and-events__list__item col-12 col-lg-6">
-          <div class="courses-and-events__list__card">
+          <div class="courses-and-events__list__card"> 
+
+       <?php if($product->get_stock_quantity() <= $product->get_low_stock_amount()  ) :  ?>
             <span class="courses-and-events__list__card__badge">ÚLTIMAS VAGAS</span>
+       <?php endif; ?>
+
+
+       <?php echo $product->get_price_html() ?>
 
                <div class="d-flex flex-column flex-md-row">
                   <div class="flex-grow-1 flex-column">
                       <h3> <?php the_field('acf__curso-estado-uf') ?></h3>
-                      <h4> <?php the_field('acf__curso-data'); ?> </h4>
+
+                      <?php if( have_rows('acf__curso-data__repeater') ): ?>
+                          <ul class="course__data-list">
+                              <?php while( have_rows('acf__curso-data__repeater') ): the_row(); 
+                                  // vars
+                                  $data = get_sub_field('acf__curso-data');
+                                  $hora = get_sub_field('acf__curso-hora');
+                                  $ano = get_sub_field('acf__curso-ano');  ?> 
+                                      <li >
+                                          <h4>
+                                              <?php if( $data ): ?>   <?php echo $data; ?>  <?php endif; ?>
+                                              <?php if( $ano ): ?> de <?php echo $ano; ?> <?php endif; ?>  
+                                              </h4> 
+                                      </li> 
+                              <?php endwhile; ?> 
+                          </ul> 
+                      <?php endif; ?>
+ 
                       <!-- <h5> Curso <?php //$terms = get_the_terms( $post->ID , 'formacao' ); foreach ( $terms as $term ) {   echo $term->name; }?> </h5> -->
-
-
-           
+ 
                       <h5> Curso
-    <?php $formacao = get_the_terms($post->ID, 'formacao');
-      if ($formacao && !is_wp_error($formacao)) {
-          $formacao_names = array();
-          foreach ($formacao as $term)
-              $formacao_names[$term->term_id] = $term->parent==0 ?   $term->name : 'em ' . $term->name ;
-          ksort($formacao_names);
-          $formacaos = implode(" ", $formacao_names); 
-          echo    $formacaos;
-      } ?> </h5>
+                      <?php $formacao = get_the_terms($post->ID, 'formacao');
+                        if ($formacao && !is_wp_error($formacao)) {
+                            $formacao_names = array();
+                            foreach ($formacao as $term)
+                                $formacao_names[$term->term_id] = $term->parent==0 ?   $term->name : 'em ' . $term->name ;
+                            ksort($formacao_names);
+                            $formacaos = implode(" ", $formacao_names); 
+                            echo    $formacaos;
+                        } ?> </h5>
   
 
 	                </div>

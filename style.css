@@ -300,8 +300,9 @@ a { color: #00ABBD}
   
 .ui-footer__nav {  
   background: #b52383;
-  margin-top: 90px;
+  margin-top: 120px;
   position: relative;
+  padding: 60px 0 20px 0;
 }
 
 .ui-footer__nav::before { 
@@ -599,7 +600,7 @@ a { color: #00ABBD}
 .depoimento_image{ width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px;  }
 .depoimento_name{ font-size: 24px; font-weight: 500; margin-bottom: 0px;}
 .depoimento_profissao{font-size: 16px; color: #5D626D; font-weight: 400}
-.depoimento_depoimento{  font-size: 13px;  max-width: 700px;  margin: auto;   }
+.depoimento_depoimento{  font-size: 13px;  max-width: 700px;  margin: auto; text-align: left }
 .depoimento_dots{}
 .depoimento_dots_item{  border-radius: 50%;  border: 0 !important;  width: 14px !important;  height: 14px !important;  border: 1px solid  #C62D91 !important }
 .depoimento_dots_item.active{background-color: #C62D91}
@@ -614,7 +615,7 @@ a { color: #00ABBD}
   .depoimento_header{height: 215px; padding-left: 0; background-size: 215px;  }
   .depoimento_title{left: 145px; top: 80px; width: 330px;  }
   .depoimento_title strong{ font-size: 54px;}
-  .depoimento_depoimento{ font-size: 18px;  line-height: 32px;}
+  .depoimento_depoimento{ font-size: 16px; line-height: 1.7;}
   .depoimento_name{margin-bottom: 20px;}
   .depoimento_item{}
  }
@@ -1241,3 +1242,25 @@ div.wpcf7-acceptance-missing { 	border: 2px solid #ffc107!important; }
 span.wpcf7-not-valid-tip { color: #dc3545!important; font-size: 1em; 	font-weight: normal; 	display: block; }
 .use-floating-validation-tip span.wpcf7-not-valid-tip { position: absolute; top: 20%; left: 20%; z-index: 100; border: 1px solid #dc3545!important; background: #fff; padding: .2em .8em;}
 
+
+
+
+
+/* WooCommerce  --------------------------------- 
+--------------------------------------------  */
+.woocommerce{}
+.woocommerce-order{}
+.woocommerce-notice{}
+.woocommerce-notice--success{}
+.woocommerce-thankyou-order-received{}
+.woocommerce-order-overview{}
+.woocommerce-thankyou-order-details{} 
+.order_details{}
+
+.woocommerce ul.order_details{
+  padding-left: 0;
+}
+.woocommerce-order-details{}
+.woocommerce-order-details__title{ font-size: 23px; }
+.woocommerce-customer-details .address{}
+.woocommerce-column__title{font-size: 23px;}

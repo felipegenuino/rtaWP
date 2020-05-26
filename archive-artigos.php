@@ -4,6 +4,7 @@
 get_header(); ?>
  
  <main class="container"> 
+<section>
 
     <div class="col-12">
       <h2 class="ui-title ui-title--bottom-border ui-title--center">
@@ -46,6 +47,7 @@ get_header(); ?>
 
                  
                     <li class="artigos__cards__item"
+                        onclick="location.href = '<?php the_permalink() ?>'"
                         data-filter-item 
                         data-filter-title="<?php the_title() ?>" 
                         data-filter-authors="<?php the_field('acf__artigos_autores');?>" >
@@ -72,8 +74,8 @@ get_header(); ?>
                         </ul>
         </div>
         </div>
-                       
-  </main> <!-- container -->  
+    </section>    
+</main> <!-- container -->  
         
 
 

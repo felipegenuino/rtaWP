@@ -1,8 +1,6 @@
 $(function() {
   //startcode
-
-
-  
+ 
   $('[data-toggle="tooltip"]').tooltip();
 
   //rodar video no modal
@@ -24,12 +22,7 @@ $(function() {
     $("#heroModal iframe").removeAttr("src allow");
   });
 
-  // Menu mobile acessivel
-  $('#modalMenu').on('shown.bs.modal', function () {
-    $('#modalMenuLabel').trigger('focus')
-  })
-
-
-
+ 
+ 
   //endcode
 });

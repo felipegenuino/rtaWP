@@ -25,7 +25,8 @@
                         <?php $loop = new WP_Query($args); ?>
                         <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                        <li class="artigos__cards__item">
+                        <li class="artigos__cards__item"
+                          onclick="location.href = '<?php the_permalink() ?>'">
                           <div class="artigos__cards__item__body">
                             <h3><?php the_title() ?></h3>
                             <em>Escrito por</em>

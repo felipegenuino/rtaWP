@@ -79,14 +79,12 @@
         <a href="#" aria-label="Abrir Menu" class="ui-header__menu-mobile" data-toggle="modal" data-target="#modalMenu">
           <i aria-hidden="true" class="fas fa-bars"></i>
         </a>
-<?php 
-  $cart_count = WC()->cart->get_cart_contents_count();
-?>
+ 
         <a class="ui-header__cart"  href="<?php echo esc_url( home_url( '/carrinho/' ) ); ?>" > 
           <img src="<?php bloginfo('template_url'); ?>/images/icon__cart.svg" alt="imagem: carrinho de compras">
-          <?php if( $cart_count ) { ?>
-            <span class="ui-header__cart-alert"> <?php echo $cart_count ?> </span>
-          <?php } ?>
+          
+            <span class="ui-header__cart-alert"> <span id="mini-cart-count"></span> </span>
+          
         </a>
 
       </nav> 

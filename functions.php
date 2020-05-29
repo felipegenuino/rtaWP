@@ -75,8 +75,9 @@ remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0
  
 
 
+ 
 
-
+/*** Página do curso: content-sincle-product ***/
 
 //Alterar nome do botão adquirir
 add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
@@ -85,7 +86,7 @@ return __('Inscrever-se', 'woocommerce');
 }
 
 //remove texto in-stock na página de produto
-add_filter( 'woocommerce_get_stock_html', '__return_empty_string', 10, 2 );
+ add_filter( 'woocommerce_get_stock_html', '__return_empty_string', 10, 2 );
  
-
+/*** ************************************** ***/
  

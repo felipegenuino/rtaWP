@@ -1,3 +1,6 @@
+
+
+ 
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -17,23 +20,42 @@
 
 defined( 'ABSPATH' ) || exit;
 
-global $product;
+global $product;  
 
 add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
 ?>
 
+
+
+
+
  
  
- 		
 
-<!-- <pre>
-<?php // print_r( $product ) ?>
-</pre>  -->
 
-<main class="w-100 d-flex  flex-column">  
+
+
+
+
+ 
+
+<!-- <pre> 
+<?php //  print_r( $product ) ?>
+</pre>   -->
+
+
+
+<main class="w-100 d-flex  flex-column"  id="product-<?php the_ID(); ?>" <?php  wc_product_class( '', $product ); ?>>  
+ 
                 <section>
                 <div class="container">
+						<div class="row">
+							<div class="col-12">
+								<?php echo wc_print_notices();  ?>
+							</div>
+						</div>
+
                     <div class="row">
                         <div class="col-12 col-lg-6 curso__hero-wrapper">
                             <div class="curso__hero">
@@ -113,19 +135,44 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 
         <section class="curso__pay"> 
             <div class="curso__pay-box">
-                <div class="curso__pay-badge">
-                    <span>20 VAGAS DISPONÍVEIS </span>
-                </div>
 
+							<?php // $product->get_stock_quantity(); ?>
+						<!-- <div class="curso__pay-badge">
+							<span><?php //  echo $product->get_stock_quantity(); ?> VAGAS DISPONÍVEIS </span>
+						</div> -->
+
+						
+
+ 
+					  
+ 
+				<?php if ($product->get_stock_status() == 'instock' ) : ?>
+					<div class="curso__pay-badge">
+						<?php if (  $product->get_stock_quantity() === 1 ) : ?>
+							<span> ÚLTIMA VAGA </span> 
+ 						<?php elseif ($product->get_stock_quantity() <= $product->get_low_stock_amount()) :  ?>
+							<span>ÚLTIMAS <?php echo $product->get_stock_quantity(); ?> VAGAS </span>
+						<?php else : ?>
+							<span><?php echo $product->get_stock_quantity(); ?>  VAGAS DISPONÍVEIS </span>
+						<?php endif ?> 
+					</div>
+				<?php  endif ?>
                 
                     <p class="curso__pay-price">
                         <strong>12x R$ 180,00 </strong>
                         <span>à vista R$ 2.500,00</span>
                     </p>
-                <div class="curso__pay-button">
-					 <?php woocommerce_template_single_add_to_cart(); ?>
-                    <!-- <a href="#" class="btn pl-4 pr-4  btn-primary btn-lg rounded-pill" type="button">Inscrever-se</a> -->
-                </div>
+					
+
+					<div class="curso__pay-button">
+						<?php if ($product->get_stock_status() == 'instock' ) : ?>
+								<?php woocommerce_template_single_add_to_cart(); ?>  
+						<?php else : ?>
+							<?php if ($product->stock_status) : ?>
+								<button type="button" class="btn btn-lg btn-primary pl-4 pr-4 rounded-pill disabled" disabled >Lotado</button> 
+							<?php  endif ?>
+						<?php endif ?> 		
+					</div>
                     
                 
             </div>
@@ -224,32 +271,40 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 
 
 
+						<?php if ($product->get_stock_status() == 'instock' ) : ?>
                     <div class="row justify-content-center mt-5">
                         <div class="col-sm-12 col-lg-8">
                     <section class="curso__pay curso__pay--full"> 
                         <div class="curso__pay-box">
-                            <div class="curso__pay-badge">
-                                <span>20 VAGAS DISPONÍVEIS </span>
-                            </div> 
+						
+							<div class="curso__pay-badge">
+								<?php if (  $product->get_stock_quantity() === 1 ) : ?>
+									<span> ÚLTIMA VAGA </span> 
+								<?php elseif ($product->get_stock_quantity() <= $product->get_low_stock_amount()) :  ?>
+									<span>ÚLTIMAS <?php echo $product->get_stock_quantity(); ?> VAGAS </span>
+								<?php else : ?>
+									<span><?php echo $product->get_stock_quantity(); ?>  VAGAS DISPONÍVEIS </span>
+								<?php endif ?> 
+							</div>
+						
                             <div class="curso__pay-info">
                                 <h4 class="curso__pay-title">Garanta já a sua vaga!</h4>
                                 <p class="curso__pay-price curso__pay-price--horizontal">
-                                    <strong>12x R$ 180,00 </strong>
-                                    <span>à vista R$ 2.500,00</span>
+                                     <strong>12x R$ <?php echo $product->get_price_html( ); ?> </strong>
+                                    <span>à vista <?php echo $product->get_price_html(); ?> </span>
                                 </p>
                             </div>
-                            <div class="curso__pay-button">
-                                <a href="#inscrever-se" class="btn pl-4 pr-4  btn-primary btn-lg rounded-pill" type="button">Inscrever-se</a>
-                            </div>
-                                
-                            
+                            <div class="curso__pay-button"> 
+									<?php woocommerce_template_single_add_to_cart(); ?>  
+							</div>
                         </div>
                         <div class="curso__pay-subtitle">
                             <p>ACEITAMOS CARTÃO DE CRÉDITO, TRANSFERÊNCIA BANCÁRIA OU BOLETO</p>
                         </div>
-                    </section>
+                    </section> 
                     </div> <!-- // col-6 -->
                     </div> <!-- // row -->
+					<?php endif ?>
                     
  
                   </div> <!-- // container -->
@@ -257,49 +312,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 
                     
                 </main>  
+ 
+  
 
-<!-- 
 
-<div id="product-<?php // the_ID(); ?>" <?php //wc_product_class( '', $product ); ?>>
-
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	// do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-	//	do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
-
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	// do_action( 'woocommerce_after_single_product_summary' );
-	?>
-</div>
-
-<?php // do_action( 'woocommerce_after_single_product' ); ?> -->

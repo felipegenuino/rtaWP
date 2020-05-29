@@ -82,7 +82,7 @@
        <?php endif; ?>
 
 
-       <?php echo $product->get_price_html() ?>
+       <?php // echo $product->get_price_html() ?>
 
                <div class="d-flex flex-column flex-md-row">
                   <div class="flex-grow-1 flex-column">

@@ -46,14 +46,14 @@ function register_my_menus() {
  add_action( 'init', 'register_my_menus' );
 
  
- function executar_na_home() { ?>
-  <section>
-    <h1>Titulo</h1>
-    <p>Conteudo da function</p>
-  </section>
- <?php } 
-    add_action('dentro_da_home', 'executar_na_home');
-     
+/*  function executar_na_home() { ?>
+//   <section>
+//     <h1>Titulo</h1>
+//     <p>Conteudo da function</p>
+//   </section>
+//  <?php } 
+//     add_action('dentro_da_home', 'executar_na_home');
+  */   
 
 
 
@@ -63,8 +63,29 @@ function register_my_menus() {
 // add_filter('the_title', 'mudar_titulo');
 
 
-  
+
 function rta_add_woocommerce_support(){
   add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'rta_add_woocommerce_support');  
+
+
+//remove action breadcrumb
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+ 
+
+
+
+
+
+//Alterar nome do botão adquirir
+add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
+function woo_custom_cart_button_text() {
+return __('Inscrever-se', 'woocommerce');
+}
+
+//remove texto in-stock na página de produto
+add_filter( 'woocommerce_get_stock_html', '__return_empty_string', 10, 2 );
+ 
+
+ 

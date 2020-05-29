@@ -20,7 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;  ?>
-<pre>
-<?php  print_r( $product ) ?>
-</pre> 
+
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>

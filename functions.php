@@ -92,6 +92,8 @@ return __('Inscrever-se', 'woocommerce');
  
 
 
+
+/*** Atualiza numero de itens dentro do icone de Carinho: header.php ***/ 
 add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 function wc_refresh_mini_cart_count($fragments){
     ob_start();
@@ -103,3 +105,4 @@ function wc_refresh_mini_cart_count($fragments){
         $fragments['#mini-cart-count'] = ob_get_clean();
     return $fragments;
 }
+/*** ************************************** ***/

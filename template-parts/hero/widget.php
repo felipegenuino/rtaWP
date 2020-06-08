@@ -138,17 +138,28 @@
         <div class="ui-hero-inner">
               <div class="ui-hero_2c">  
                   <div class="ui-hero__content">
-                      <h1 class="ui-hero__text">RTA um sucesso no <br> tratamento de doenças<br> respitarórias</h1>
-                      <a class="ui-hero__call btn btn-lg btn-primary rounded-pill" href="<?php bloginfo('url' ) ?>/metodo-rta/" role="button">Conheça o método</a>
+                      <h1 class="ui-hero__text"> <?php the_field('acf_banner-main-title') ?>  </h1>
+                      <?php 
+                        $link = get_field('acf_banner-main_button-link');
+                        if( $link ): 
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                            <a class="ui-hero__call btn btn-lg btn-primary rounded-pill" href="<?php echo esc_url( $link_url ); ?>" role="button" target="<?php echo esc_attr( $link_target ); ?>">
+                              <?php echo esc_html( $link_title ); ?>
+                            </a>
+                    <?php endif; ?>
+
                   </div>
               </div> <!-- // ui-hero_2c -->
               
               <div class="ui-hero_2c">
-                  <div class="ui-hero__player" style="--hero-player-background: url(<?php bloginfo('template_url'); ?>/template-parts/hero/demo.gif)"> 
+                  <div class="ui-hero__player" style="--hero-player-background: url(<?php if( get_field('acf_banner-main_video-gif') ):   the_field('acf_banner-main_video-gif');   endif; ?>"> 
                   <button class="ui-hero__player__button"  
                       data-toggle="modal" 
                       data-target="#heroModal"
-                      data-video="https://www.youtube.com/embed/Z0hU4QfhBqA?autoplay=1&modestbranding=1"
+                      data-video="https://www.youtube.com/embed/<?php the_field('acf_banner-main_video-id') ?>?autoplay=1&modestbranding=1"
                       > 
                         <img class="ui-hero__player__button__icon" src="<?php bloginfo('template_url'); ?>/template-parts/hero/icon__player.svg" alt="">
                         <span class="ui-hero__player__button__text" >Assista o VÍDEO</span>

@@ -8,6 +8,9 @@ get_header(); ?>
 
 
 
+
+
+
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <article class="col-12">
 
@@ -56,7 +59,18 @@ get_header(); ?>
 
                     <div class="row justify-content-lg-center">  
                             <div class="col-12 col-lg-10 "> 
+
+
+ 
+
+ 
+
+
+
                                     <ul class="encontre-profissional_list">
+
+ 
+
                                         <li  
                                         class="encontre-profissional_item" 
                                         data-filter-item 

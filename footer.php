@@ -55,7 +55,8 @@
       <div class="modal-header modal__menu-header">
         <h5 class="modal-title" id="modalMenuLabel">Menu</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <span class="close-text"> Fechar</span> 
+        <span aria-hidden="true">&times;</span>
         </button>
       </div>
      

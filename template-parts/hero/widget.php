@@ -15,6 +15,7 @@
 .ui-hero_2c {
   flex: 0 0 100%;
   max-width: 100%;
+  width: 100%;
   display: flex;
 }
 
@@ -35,8 +36,8 @@
   font-size: 14px
 }
 .ui-hero__player {
-  width: 257px;
-    height: 151px;
+  width: 100%;
+  height: 360px;
   background-color: #fff;
   box-shadow: -11px 9px 11px rgba(122, 131, 158, 0.2);
   border-radius: 20px 4px;
@@ -63,7 +64,7 @@
     background-blend-mode: multiply;
     background-color: var(--color-4);
     transition: all 0.2s linear;
-     
+    background-position: center; 
 }
 
 
@@ -108,7 +109,7 @@
 
 .ui-hero__player__button__text { font-size: 14px}
 .ui-hero__player__button__icon { width: 157px;   height: 157px; }  
-.ui-hero__player { width: 337px; height: 243px;} 
+/* .ui-hero__player { width: 100%; height: 243px;}  */
 .ui-hero__call { margin-top: 20px; font-size: 14px}
 .ui-hero__text { font-size: 33px;} 
 .ui-hero-inner{ flex-direction: row; }
@@ -120,7 +121,7 @@
 @media (min-width: 1200px) { 
   .ui-hero__player__button__text { font-size: 14px}
   .ui-hero__player__button__icon { width: 157px;   height: 157px; }  
-  .ui-hero__player {  width: 627px; height: 383px;} 
+  /* .ui-hero__player {  width: 627px; height: 383px;}  */
   .ui-hero__call {  margin-top: 20px; font-size: 14px}
   .ui-hero__text {  font-size: 48px;}
 
@@ -156,10 +157,11 @@
               
               <div class="ui-hero_2c">
                   <div class="ui-hero__player" style="--hero-player-background: url(<?php if( get_field('acf_banner-main_video-gif') ):   the_field('acf_banner-main_video-gif');   endif; ?>"> 
-                  <button class="ui-hero__player__button"  
+                  <button 
+                      class="ui-hero__player__button"  
                       data-toggle="modal" 
                       data-target="#heroModal"
-                      data-video="https://www.youtube.com/embed/<?php the_field('acf_banner-main_video-id') ?>?autoplay=1&modestbranding=1"
+                      data-video="https://www.youtube.com/embed/<?php the_field('acf_banner-main_video-id') ?>?autoplay=1&modestbranding=1&rel=0"
                       > 
                         <img class="ui-hero__player__button__icon" src="<?php bloginfo('template_url'); ?>/template-parts/hero/icon__player.svg" alt="">
                         <span class="ui-hero__player__button__text" >Assista o VÍDEO</span>

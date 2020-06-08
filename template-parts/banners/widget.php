@@ -7,8 +7,7 @@
   background-color: var(--color-3);
   border-radius: 22px;
   padding: 20px;
-  display: flex;
-  align-items: center;
+  display: flex; 
   justify-content: space-between;
   margin-bottom: 30px;
   margin-top: 50px;
@@ -17,13 +16,13 @@
 
 .ui-banner__content {}
 .ui-banner__content h2 {
-  font-size: 16px;
+  font-size: 19px;
   color: var(--color-11); 
   font-weight: var(--type-bold);
   margin-bottom: 0;
 }
 .ui-banner__content p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-11);
   font-weight: var(--type-medium);
   margin-bottom: 10px;
@@ -47,6 +46,7 @@
     flex-direction: row;
     padding: 35px 50px;
     margin-bottom: 0px;
+    align-items: center;
   }
 }
 @media (min-width: 1200px) {

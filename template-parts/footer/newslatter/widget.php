@@ -7,15 +7,23 @@
                 <strong>Cadastre-se</strong> para receber informações sobre os <strong>próximos cursos e eventos</strong> 
             </h2> 
 
-            <form class="form-inline">
+            <?php echo do_shortcode('[contact-form-7 id="331" title="Newslatter" html_class="form-inline"]'); ?>
+
+<!-- <hr>
+             <form class="form-inline">
                 <div class="input-group ">
-                    <input type="email" class="form-control rounded-pill form-control-lg" aria-label="Digite seu e-mail aqui" placeholder="Digite seu e-mail aqui">
+                    <input 
+                      type="email" 
+                      class="form-control rounded-pill form-control-lg" 
+                      aria-label="Digite seu e-mail aqui" 
+                      placeholder="Digite seu e-mail aqui"
+                      >
 
                   <div class="input-group-append">
                     <button class="btn btn-lg btn-primary rounded-pill" type="submit">Cadastrar</button>
                   </div>
                 </div>
-            </form> 
+            </form>    -->
               
         </div> <!-- //col-8 -->
     </div> <!-- //row -->

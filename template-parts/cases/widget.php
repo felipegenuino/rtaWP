@@ -7,22 +7,10 @@
 
  
 
-<style> 
-
-.case {
-    padding: 60px 0;
-    position: relative;
-}
-
-
+<style>  
+  .case { padding: 60px 0; position: relative; } 
   .case__widget{}
-  .case__widget-list{ 
-    justify-content: center;
-      display: flex;  flex-direction: column;   margin: 0; padding: 0;  list-style: none;      align-items: center;}
-
-
-
-
+  .case__widget-list{ justify-content: center; display: flex;  flex-direction: column; margin: 0; padding: 0;  list-style: none; align-items: center;}
   .case__widget-item {
     width: 100%;
     max-width: 100%;
@@ -35,19 +23,9 @@
     background: #42495B;
     margin: 15px;
 }
-
-  
-  
  
- 
-  .case__widget-item:hover,
-  .case__widget-item:focus
-  {} 
-
-
- 
-
-  .case__widget-info{ 
+  .case__widget-item:hover, .case__widget-item:focus{} 
+   .case__widget-info{ 
     position: absolute;
     left: 0;
     right: 0;
@@ -64,8 +42,7 @@
     align-self: center;
     max-width: 400px;
 }
-
-
+ 
   .case__widget-gradient{
     mix-blend-mode: multiply;
     background: #d2d2d200 linear-gradient(55deg, #FA7C92 0%, #2DCCF6 100%) 10% 0% no-repeat padding-box;
@@ -89,45 +66,24 @@
     background-size: cover;
   }
   .case__item{}
-
-
  
-
   @media (min-width: 1200px) {
-    .case__widget-list{     flex-direction: row;  }
-   
-       .case__widget-item{   
-        flex-direction: row;
-
-        width: 636px;
-       height: 394px; 
-
-          /* width: 452px;
-          height: 280px; */
-
-
-          max-width: 100%;
-      
-       }
-      .case__widget-info h2 {  font-size: 28px;  }
-
-  }
-
-  
+  .case__widget-list{ flex-direction: row;  } 
+  .case__widget-item{ flex-direction: row; width: 636px;  height: 394px; max-width: 100%; }
+  .case__widget-info h2 {  font-size: 28px;  } 
+  } 
 </style>
 
  
 <div class="container"> 
   <div class="row"> 
-      <div class="col-12">
-          <h2 class="ui-title ui-title--bottom-border ui-title--center">
-               <span class="ui-title__text"> Casos <span class="fw-l">de</span> Sucesso   </span> 
-          </h2> 
-      </div> <!-- // col-12 -->
+    <div class="col-12">
+      <h2 class="ui-title ui-title--bottom-border ui-title--center">
+        <span class="ui-title__text"> Casos <span class="fw-l">de</span> Sucesso   </span> 
+      </h2> 
+    </div> <!-- // col-12 -->
 
-      <div class="col-12">
-
-
+    <div class="col-12"> 
       <?php if( have_rows('acf__case-repeat') ): ?>
 
 <ul class="case__widget-list">
@@ -139,6 +95,7 @@
   $title = get_sub_field('acf__case-title');
   $image = get_sub_field('acf__case-thumb'); 
   $link = get_sub_field('acf__case-link');
+  $videoID = get_sub_field('acf__case-video-id');
 
  //var_dump( $link)
   ?>
@@ -148,10 +105,23 @@
 
 
 
-  <div class="case__widget-info">
+<div 
+  class="case__widget-info"
+  data-toggle="modal" 
+  data-target="#heroModal"
+  data-video="https://www.youtube.com/embed/<?php if( $videoID ): echo $videoID; endif;?>?autoplay=1&rel=0&modestbranding=1"
+  >
     <div class="case__widget-info-inner">
         <?php if( $title ): ?> <h2> <?php echo $title; ?> </h2> <?php endif; ?>
-      <a  <?php if( $link ): ?>  href="<?php echo $link['url']; ?>" <?php endif; ?>    target="<?php echo $link['target']; ?>"  type="button" class="btn btn-lg btn-primary rounded-pill">Assistir case</a>
+          <button 
+            data-toggle="modal" 
+            data-target="#heroModal"
+            data-video="https://www.youtube.com/embed/<?php if( $videoID ): echo $videoID; endif;?>?autoplay=1&rel=0&modestbranding=1"
+            type="button" 
+            class="btn btn-lg btn-primary rounded-pill"
+           >Assistir case</button>
+
+      <!-- <a <?php // if( $link ): ?>  href="<?php // echo $link['url']; ?>" <?php // endif; ?>    target="<?php // echo $link['target']; ?>"  type="button" class="btn btn-lg btn-primary rounded-pill">Assistir case</a> -->
     </div>
   </div> <!--  // cases__widget-info --> 
 

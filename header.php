@@ -109,7 +109,7 @@
         ?>
        
         <a class="btn btn-primary rounded-pill btn-sm" style="white-space: nowrap;" href="<?php echo esc_url( home_url( '/minha-conta /' ) ); ?>"  >
-            Acesso Aluno
+            Área do Aluno
         </a>
 
         <a href="#" aria-label="Abrir Menu" style=" margin-left: 15px;" class="ui-header__menu-mobile" data-toggle="modal" data-target="#modalMenu">

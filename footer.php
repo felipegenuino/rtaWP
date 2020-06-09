@@ -53,13 +53,18 @@
   <div class="modal-dialog  modal__menu-dialog " role="document">
     <div class="modal-content modal__menu-content">
       <div class="modal-header modal__menu-header">
-        <h5 class="modal-title" id="modalMenuLabel">Menu</h5>
+        <h5 class="modal-title" id="modalMenuLabel">Lista de páginas</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span class="close-text"> Fechar</span> 
         <span aria-hidden="true">&times;</span>
         </button>
       </div>
      
+      <div class="ui-menu_mobile__login">
+        <a class="btn btn-primary rounded-pill btn-sm" style="white-space: nowrap;" href="http://localhost/wp-rtaonline/minha-conta%20/">
+            Acesso Aluno
+        </a>
+      </div>
        
       <?php
         wp_nav_menu( array(  

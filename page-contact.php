@@ -68,16 +68,19 @@ get_header(); ?>
                                 <div class="col-12">
                                     <ul class="contato__social-list">
                                         <li class="contato__social-item ">
-                                            <a href="#" class="contato__social-link"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li class="contato__social-item ">
-                                            <a href="#" class="contato__social-link"><i class="fab fa-google-plus-g"></i></a>
+                                            <a href="https://www.facebook.com/rta.metodo" target="_blank" class="contato__social-link"><i class="fab fa-facebook-f"></i></a>
+                                        </li> 
+                                        <li class="contato__social-item">
+                                            <a href="https://twitter.com/MetodoRTA" target="_blank" class="contato__social-link"><i class="fab fa-twitter"></i></a>
                                         </li>
                                         <li class="contato__social-item">
-                                            <a href="#" class="contato__social-link"><i class="fab fa-twitter"></i></a>
-                                        </li>
+                                            <a href="https://www.instagram.com/rtaonline/" target="_blank" class="contato__social-link"><i class="fab fa-instagram"></i></a>
+                                        </li> 
                                         <li class="contato__social-item">
-                                            <a href="#" class="contato__social-link"><i class="fab fa-instagram"></i></a>
+                                            <a href="https://www.youtube.com/user/MetodoRTA" target="_blank" class="contato__social-link"><i class="fab fa-youtube"></i></a>
+                                        </li> 
+                                        <li class="contato__social-item">
+                                            <a href="https://www.youtube.com/user/MetodoRTA" target="_blank" class="contato__social-link"><i class="fab fa-youtube"></i></a>
                                         </li> 
                                     </ul>
                                 </div>

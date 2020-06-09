@@ -46,7 +46,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 
 
 
-<main class="w-100 d-flex  flex-column"  id="product-<?php the_ID(); ?>" <?php  wc_product_class( '', $product ); ?>>  
+<section class="w-100 d-flex  flex-column"  id="product-<?php the_ID(); ?>" <?php  wc_product_class( '', $product ); ?>>  
  
                 <section>
                 <div class="container">
@@ -290,8 +290,9 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
                             <div class="curso__pay-info">
                                 <h4 class="curso__pay-title">Garanta já a sua vaga!</h4>
                                 <p class="curso__pay-price curso__pay-price--horizontal">
-                                     <strong>12x R$ <?php echo $product->get_price_html( ); ?> </strong>
-                                    <span>à vista <?php echo $product->get_price_html(); ?> </span>
+                                    <span>Pagamento em até 12x: </span>
+                                     <strong>  <?php echo $product->get_price_html(); ?>  </strong>
+                                    
                                 </p>
                             </div>
                             <div class="curso__pay-button"> 
@@ -311,7 +312,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
  </section>
 
                     
-                </main>  
+</section>  
  
   
 

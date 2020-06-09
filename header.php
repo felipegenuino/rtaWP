@@ -107,16 +107,22 @@
 
        // wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
         ?>
-        <a href="#" aria-label="Abrir Menu" class="ui-header__menu-mobile" data-toggle="modal" data-target="#modalMenu">
+       
+        <a class="btn btn-primary rounded-pill btn-sm" style="white-space: nowrap;" href="<?php echo esc_url( home_url( '/minha-conta /' ) ); ?>"  >
+            Acesso Aluno
+        </a>
+
+        <a href="#" aria-label="Abrir Menu" style=" margin-left: 15px;" class="ui-header__menu-mobile" data-toggle="modal" data-target="#modalMenu">
+          Menu
           <i aria-hidden="true" class="fas fa-bars"></i>
         </a>
- 
+        
         <a class="ui-header__cart"  href="<?php echo esc_url( home_url( '/carrinho/' ) ); ?>" > 
-          <img src="<?php bloginfo('template_url'); ?>/images/icon__cart.svg" alt="imagem: carrinho de compras">
-          
-            <span class="ui-header__cart-alert"> <span id="mini-cart-count"></span> </span>
-          
+          <img src="<?php bloginfo('template_url'); ?>/images/icon__cart.svg" alt="imagem: carrinho de compras"> 
+            <span class="ui-header__cart-alert"> <span id="mini-cart-count"></span> </span> 
         </a>
+
+       
 
       </nav> 
     </div> <!-- // ui-header__main -->

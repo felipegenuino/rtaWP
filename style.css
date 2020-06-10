@@ -1327,6 +1327,19 @@ span.wpcf7-not-valid-tip { color: #dc3545!important; font-size: 1em; 	font-weigh
 
 
 
+.woocommerce-account.woocommerce-lost-password .woocommerce{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1.5rem 4rem rgba(22,28,45,.1)!important;
+  width: 530px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 30px;
+}
+
+.woocommerce-account .woocommerce-error, .woocommerce-account .woocommerce-info, .woocommerce-account  .woocommerce-message{ }
+ 
+.woocommerce-account form.woocommerce-ResetPassword p {  width: 100%; }
 .woocommerce-account .woocommerce{
   display: flex;
   flex-direction: row;
@@ -1349,8 +1362,62 @@ span.wpcf7-not-valid-tip { color: #dc3545!important; font-size: 1em; 	font-weigh
 }
  
 .woocommerce-MyAccount-navigation-link a{color: #000}
-.woocommerce-account .woocommerce-MyAccount-content { padding: 30px 20px 20px 20px; }
+.woocommerce-account .woocommerce-MyAccount-content { 
+  padding: 30px 20px 20px 20px; 
+  margin: 0 auto;
+}
 
+.woocommerce-EditAccountForm fieldset{margin-top: 20px;}
+.woocommerce-EditAccountForm fieldset legend{ margin-bottom: 0;}
+
+
+.page-id-276 .woocommerce h2 { display: none; }
+.woocommerce-form.woocommerce-form-login.login{
+  margin: 0;
+  border: 0;
+}
+
+
+.page-id-276.woocommerce-account.logged-in .woocommerce  { 
+  flex-direction: row;
+    width: initial;
+}
+.page-id-276.woocommerce-account .woocommerce {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1.5rem 4rem rgba(22,28,45,.1)!important;
+  width: 500px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.u-column1.woocommerce-Address, .u-column2.woocommerce-Address {
+  padding: 20px !important;
+  /* background: #f8f8f8; */
+  font-style: normal;
+  margin-bottom: 0;
+  border: 1px solid rgba(0,0,0,.1);
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  text-align: left;
+  width: 100%;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+.woocommerce-Address-title{ display: flex; align-items: center; width: 100%; margin-bottom: 10px; }
+.woocommerce-Address-title h3{ margin: 0;}
+.woocommerce-Address-title .edit {
+  font-weight: var(--type-medium);
+  color: #fff;
+  background-color: var(--color-1);
+  border-color: var(--color-1);
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.2s linear;
+  font-size: 12px;
+  margin-left: auto;
+  border-radius: 50rem!important;
+}
 
 
 

@@ -1,0 +1,19 @@
+.privacy-policy .page-entry {
+    max-width: 600px;
+    margin: 60px auto;
+    border: 1px solid #eee;
+    padding: 60px 60px 20px 60px;
+    border-radius: 6px;
+}
+
+.privacy-policy .ui-title{
+    max-width: 600px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.ui-title__text {  font-size: 24px;  }
+
+@media (min-width: 425px) {
+    .ui-title__text {  font-size: 30px;  }
+}

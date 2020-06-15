@@ -36,9 +36,10 @@
                 <div>
                   <ul class="ui-footer__nav__list-icons">
                     <li><a href="https://www.facebook.com/rta.metodo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/MetodoRTA" target="_blank" ><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://twitter.com/RtaMetodo" target="_blank" ><i class="fab fa-twitter"></i></a></li>
                     <li><a href="https://www.instagram.com/rtaonline/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a></li>
-                    <li><a href="https://www.youtube.com/user/MetodoRTA" target="_blank" > <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCzZCIcrSwvHfR4M0Vws5LSQ?view_as=subscriber" target="_blank" > <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5548999164520" target="_blank" > <i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                   </ul>
                 </div>
               </li>

@@ -72,7 +72,7 @@ get_header(); ?>
                 </div>
                 </div>
 
-                <div class="artigo__share">
+                <div class="artigo__share d-none" >
                 <p class="artigo__share-text"><strong>Compartilhe</strong> esse artigo:</p>
                 <ul class="artigo__share-list">
                     <li class="artigo__share-item artigo__share-item--linkedin">
@@ -82,10 +82,10 @@ get_header(); ?>
                         <a href="#" class="artigo__share-link"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li class="artigo__share-item artigo__share-item--twitter">
-                        <a href="#" class="artigo__share-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://twitter.com/RtaMetodo" class="artigo__share-link"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li class="artigo__share-item artigo__share-item--whatsapp">
-                        <a href="#" class="artigo__share-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="" class="artigo__share-link"><i class="fab fa-whatsapp"></i></a>
                     </li> 
                 </ul>
                 </div>

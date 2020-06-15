@@ -1,6 +1,7 @@
 $(function() {
   //startcode
  
+  
   $('[data-toggle="tooltip"]').tooltip();
 
   //rodar video no modal

@@ -45,7 +45,7 @@ get_header(); ?>
                                         </div>
                                         <div class="contato__info-text-wrap" >
                                             <span class="fs-14 color-6">Whatsapp</span>
-                                            <span class="fs-16 fw-m">48 9 9916.4520</span>
+                                            <span class="fs-16 fw-m"> <a href="https://api.whatsapp.com/send?phone=5548999164520" target="_blank" data-toggle="tooltip" data-placement="top" title="Clique para falar conosco direto pelo Whatsapp"> 48 9 9916.4520 </a> </span>
                                         </div>
                                     </div>
                                 </div> 
@@ -71,16 +71,16 @@ get_header(); ?>
                                             <a href="https://www.facebook.com/rta.metodo" target="_blank" class="contato__social-link"><i class="fab fa-facebook-f"></i></a>
                                         </li> 
                                         <li class="contato__social-item">
-                                            <a href="https://twitter.com/MetodoRTA" target="_blank" class="contato__social-link"><i class="fab fa-twitter"></i></a>
+                                            <a href="https://twitter.com/RtaMetodo" target="_blank" class="contato__social-link"><i class="fab fa-twitter"></i></a>
                                         </li>
                                         <li class="contato__social-item">
                                             <a href="https://www.instagram.com/rtaonline/" target="_blank" class="contato__social-link"><i class="fab fa-instagram"></i></a>
                                         </li> 
                                         <li class="contato__social-item">
-                                            <a href="https://www.youtube.com/user/MetodoRTA" target="_blank" class="contato__social-link"><i class="fab fa-youtube"></i></a>
+                                            <a href="https://www.youtube.com/channel/UCzZCIcrSwvHfR4M0Vws5LSQ?view_as=subscriber" target="_blank" class="contato__social-link"><i class="fab fa-youtube"></i></a>
                                         </li> 
                                         <li class="contato__social-item">
-                                            <a href="https://www.youtube.com/user/MetodoRTA" target="_blank" class="contato__social-link"><i class="fab fa-youtube"></i></a>
+                                            <a href="https://api.whatsapp.com/send?phone=5548999164520" target="_blank" class="contato__social-link"><i class="fab fa-whatsapp"></i></a>
                                         </li> 
                                     </ul>
                                 </div>

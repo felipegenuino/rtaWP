@@ -110,3 +110,24 @@ function wc_refresh_mini_cart_count($fragments){
     return $fragments;
 }
 /*** ************************************** ***/
+
+
+
+
+// function adicionar_antes_do_carrinho(){
+//   echo '<div style="background: blue">';
+// }
+
+
+// function adicionar_depois_do_carrinho(){
+//   echo '</div>';
+// }
+// add_action('woocommerce_before_cart', 'adicionar_antes_do_carrinho');
+// add_action('woocommerce_after_cart', 'adicionar_depois_do_carrinho');
+
+
+function modificar_thumbnail($img){
+  //print_r($img);
+  return false;
+}
+add_filter('woocommerce_cart_item_thumbnail', 'modificar_thumbnail' );

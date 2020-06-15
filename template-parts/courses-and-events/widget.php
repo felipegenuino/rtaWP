@@ -55,7 +55,7 @@
 
 
 
-      <ul class="courses-and-events__list row">
+      <ul class="courses-and-events__list row justify-content-center">
  
              <?php $args = array(
                   'post_type' => 'product',
@@ -130,8 +130,16 @@
 
         <?php endwhile; ?>
 
-                        <?php else: ?>
-                            <h1>Nenhum curso cadastrado!</h1>
+                        <?php else: ?> 
+                            <div class="col-lg-7">
+                              
+                              <div class="courses-and-events__list__card text-center"> 
+                                <h1><i class="fas fa-thumbs-up"></i></h1>
+                                <h4>Aguarde, estamos cadastrando novos cursos.</h4>
+                                <p class="lead"> Está com dúvida, fale conosco pelo <a class="btn btn-secondary rounded-pill" href="https://api.whatsapp.com/send?phone=5548999164520" target="_blank" > <i class="fab fa-whatsapp"></i> whatsapp </a> </p>
+                            </div> 
+                        </div>
+                         
                         <?php endif; ?>
                         <?php wp_reset_postdata(); ?>
 
@@ -143,7 +151,7 @@
  <div class="courses-and-events__more">
   <?php 
     $args = array(
-    'post_type' => 'cursos'
+    'post_type' => 'product'
     );
     $the_query = new WP_Query( $args );
     $totalpost = $the_query->found_posts; 

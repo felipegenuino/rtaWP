@@ -108,7 +108,7 @@
        // wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
         ?>
        
-        <a class="btn btn-primary rounded-pill btn-sm" style="white-space: nowrap;" href="<?php echo esc_url( home_url( '/minha-conta /' ) ); ?>"  >
+        <a class="btn btn-primary rounded-pill btn-sm" style="white-space: nowrap;" href="<?php echo esc_url( home_url( '/minha-conta/' ) ); ?>"  >
             Área do Aluno
         </a>
 

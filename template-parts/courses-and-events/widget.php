@@ -3,7 +3,7 @@
   .courses-and-events__list__item {  list-style: none; margin: 0;  }
   .courses-and-events__list__item h3{ font-size: 24px; font-weight: var(--type-bold); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
   .courses-and-events__list__item h4{font-size: 18px; font-weight: var(--type-bold); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
-  .courses-and-events__list__item h5{ font-size: 18px; font-weight: var(--type-regular); /* text-transform: uppercase;  */ }
+  .courses-and-events__list__item h5{ font-size: 18px; font-weight: var(--type-regular); color:#5D626D }
   .courses-and-events__list__card{
         border: 1px solid var(--color-7);
     border-radius: 10px;
@@ -57,9 +57,17 @@
 
       <ul class="courses-and-events__list row justify-content-center">
  
-             <?php $args = array(
+
+    
+             <?php
+ 
+
+ $posts_per_page =  is_post_type_archive('product')  ?  -1  :  6 ;
+               
+
+             $args = array(
                   'post_type' => 'product',
-                  'posts_per_page'=> 6, 
+                  'posts_per_page'=> $posts_per_page, 
                   'orderby'  => array( 
                       'ID' => 'DESC' ,
                   ),
@@ -148,21 +156,26 @@
       </ul>
 
 
- <div class="courses-and-events__more">
-  <?php 
-    $args = array(
-    'post_type' => 'product'
-    );
-    $the_query = new WP_Query( $args );
-    $totalpost = $the_query->found_posts; 
-    ?> 
+      <?php if(!is_post_type_archive('product')) :  ?>
+        <div class="courses-and-events__more">
+          <?php 
+            $args = array(
+            'post_type' => 'product'
+            );
+            $the_query = new WP_Query( $args );
+            $totalpost = $the_query->found_posts; 
+            ?> 
 
-    <?php if($totalpost >= 6) :  ?>  
-    <button type="button" class="btn btn-link "  onclick="location.href='<?php bloginfo('url');?>/cursos/'"   > <i class="fa fa-angle-right"></i> Conheça nossos cursos </button>
-    <?php  else: ?>  
-    <?php  endif; ?> 
- </div>
-    
+            <?php if($totalpost >= 6) :  ?>  
+            <button type="button" class="btn btn-link "  onclick="location.href='<?php bloginfo('url');?>/cursos-e-eventos/'"   > <i class="fa fa-angle-right"></i> Conheça nossos cursos </button>
+            <?php  else: ?>  
+            <?php  endif; ?> 
+        </div>
+            
+
+      <?php endif;   ?>
+     
+
            
            
 

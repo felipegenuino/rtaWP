@@ -1,5 +1,3 @@
-
-
 :root {
     --color-1: #b52383;
     --color-2: #c62d91;
@@ -42,23 +40,7 @@
   /* @media (min-width: var(--breakpoint-small)) { }
      @media (min-width: var(--breakpoint-medium)) {}
      @media (min-width: var(--breakpoint-large)) {} */
-  
-  
-  
-  .ui-header, 
-  .ui-footer {
-    /* display: none !important; */
-  }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ 
   
   /* Direction Modal  --------------------------------- 
   --------------------------------------------  */
@@ -117,11 +99,7 @@
   
   
   
-  .ui-header__top {
-  }
-  .ui-header__main {
-  }
-  
+ 
   .ui-header__flags__list {
     list-style: none;
     margin: 0;
@@ -132,11 +110,7 @@
   .ui-header__flags__item {
     margin-left: 5px;
   }
-  .ui-header__flags__link {
-  }
-  .ui-header__flags__image {
-  }
-  
+ 
   .home .ui-header__background,
   .page-template-page-styleguide .ui-header__background {
     background-position: bottom -160px left -40px;
@@ -153,8 +127,7 @@
     top: 0;
     z-index: -1;
   }
-  
-  .ui-header {}
+   
   .ui-header__nav {  align-self: center; display: flex; align-items: center;}
   .ui-header__cart { 
     margin-left: 20px;
@@ -212,7 +185,7 @@
   
   .ui-header__menu li.current-menu-item  a, .ui-header__menu li.current_page_parent a { border-color: var(--color-2); }
   
-  .menu-item-has-children { }
+  
   .ui-header__menu .menu-item-has-children .sub-menu {  display: none; }
   .ui-header__menu .menu-item-has-children:hover .sub-menu {  display: flex; }
   
@@ -224,7 +197,7 @@
     font-size: 22px;
     color: #00ABBD;
   }
-  .modal__menu{ }
+   
   .modal__menu-dialog{ 
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   }
@@ -268,7 +241,7 @@
     margin-bottom: 20px;
     background: #eee;
   }
-  .ui-menu_mobile__login a {}
+ 
   
   .ui-menu_mobile ul {
     list-style: none;
@@ -329,7 +302,7 @@
     display: flex;
     width: 100%;
     content: "";
-    background-image: url(images/footer__nav_background-line.svg);
+    background-image: url(../images/footer__nav_background-line.svg);
     position: absolute;
     top: -50px;
     background-position: center;
@@ -522,10 +495,10 @@
     border: none;
     background-position: center;
   }
-  .ui-seach-button--default{  background-image: url(./images/icon_search--dark.svg);}
-  .ui-seach-button--close{ display: none;  background-color: transparent; background-image: url(./images/icon_close--dark.svg); }
+  .ui-seach-button--default{  background-image: url(../images/icon_search--dark.svg);}
+  .ui-seach-button--close{ display: none;  background-color: transparent; background-image: url(../images/icon_close--dark.svg); }
   
-  .ui-seach-input:focus ~ .ui-seach-button--default{ background-color: #b52383; background-image: url(./images/icon_search--light.svg); }
+  .ui-seach-input:focus ~ .ui-seach-button--default{ background-color: #b52383; background-image: url(../images/icon_search--light.svg); }
   .ui-seach-input:focus ~ .ui-seach-button--close {display: none}
   
   
@@ -536,7 +509,7 @@
   
   
   .ui-blockote{ 
-    background-image: url(./images/blockote.svg);
+    background-image: url(../images/blockote.svg);
       background-repeat: no-repeat;
       background-position: top left;
       padding: 30px 0 0 40px;
@@ -602,7 +575,7 @@
   
   @media (min-width: 768px) {
     .page-template-page-home {
-      background-image: url(./images/home-hero-background.svg);
+      background-image: url(../images/home-hero-background.svg);
       background-size: 880px 777px;
       background-position: right -600px top -250px;
       background-repeat: no-repeat;
@@ -612,7 +585,7 @@
   
   @media (min-width: 1200px) {
     .page-template-page-home{ 
-      background-image: url(./images/home-hero-background.svg);
+      background-image: url(../images/home-hero-background.svg);
       background-size: 880px 777px;
       background-position: right -440px top -150px;
       background-repeat: no-repeat;
@@ -623,7 +596,7 @@
     width: 100%;
     position: relative; 
     padding: 60px 0;
-    background-image: url(./images/testimonials-background.svg);
+    background-image: url(../images/testimonials-background.svg);
     background-size: 880px 777px;
     background-position: right -740px top -300px;
     background-repeat: no-repeat;
@@ -632,7 +605,7 @@
    
   .depoimento_title{ font-size: 18px;  max-width: 100%; position: absolute; left: 20px; top: 30px; line-height: 1.1;}
   .depoimento_title strong{ font-size: 44px;   display: flex;}
-  .depoimento_header{ padding-left: 30px; background-image: url(./images/blockote.svg); background-repeat: no-repeat; height: 100px; background-size: 55px; position: relative; width: 460px; margin: 0 auto; max-width: 100%;}
+  .depoimento_header{ padding-left: 30px; background-image: url(../images/blockote.svg); background-repeat: no-repeat; height: 100px; background-size: 55px; position: relative; width: 460px; margin: 0 auto; max-width: 100%;}
   .depoimento_carousel{  width: 100%;  }
   .depoimento_item{  text-align: center; padding: 0px 20px 40px 20px; }
   .depoimento_image{ width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px;  }
@@ -914,7 +887,7 @@
   
    
     .metodo{
-      background-image: url(./images/metodo-background-1.svg), url(./images/metodo-background-2.svg);
+      background-image: url(../images/metodo-background-1.svg), url(../images/metodo-background-2.svg);
       background-size: 880px 777px,  880px 777px;
       background-position: left -530px top -70px, right -520px bottom -110px;
       background-repeat: no-repeat, no-repeat;

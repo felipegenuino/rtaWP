@@ -8,6 +8,36 @@ get_header(); ?>
 
 
 
+<?php
+//  $blogusers = get_users();
+ 
+//  // Array of WP_User objects.
+//  foreach ( $blogusers as $user ) {
+//      echo '<span>' . esc_html( $user->user_email ) . '</span>';
+//      echo '<span>' . esc_html( $user->roles[0] ) . '</span>';
+//  }
+
+
+
+
+//  $query = new WP_User_Query(array(
+//     'role' => 'Customer',
+//     'number' => 10,
+//     'orderby' => 'user_registered',
+//     'order' => 'DESC'
+// ));
+// $blogusers = $query->get_results();
+ 
+
+// foreach ( $blogusers as $user ) {
+//     echo '<pre>';
+//     var_dump($user);
+//     echo '</pre>';
+//     // echo '<span>' . esc_html( $user->user_email ) . '</span>';
+//     // echo '<span>' . esc_html( $user->roles[0] ) . '</span>';
+    
+// }
+ ?>
 
 
 
@@ -60,12 +90,7 @@ get_header(); ?>
                     <div class="row justify-content-lg-center">  
                             <div class="col-12 col-lg-10 "> 
 
-
  
-
- 
-
-
 
                                     <ul class="encontre-profissional_list">
 

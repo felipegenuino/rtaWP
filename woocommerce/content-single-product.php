@@ -159,8 +159,8 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 				<?php  endif ?>
                 
                     <p class="curso__pay-price">
-                        <strong>12x R$ 180,00 </strong>
-                        <span>à vista R$ 2.500,00</span>
+                        <strong>Pague em até 12x</strong>
+                        <span>à vista <?php  echo $product->get_price_html(); ?></span>
                     </p>
 					
 
@@ -289,10 +289,9 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 						
                             <div class="curso__pay-info">
                                 <h4 class="curso__pay-title">Garanta já a sua vaga!</h4>
-                                <p class="curso__pay-price curso__pay-price--horizontal">
-                                    <span>Pagamento em até 12x: </span>
-                                     <strong>  <?php echo $product->get_price_html(); ?>  </strong>
-                                    
+                                <p class="curso__pay-price xcurso__pay-price--horizontal">
+                                    <span> Pagamento em até 12x no cartão </span>
+                                     <!-- <strong> <?php // echo $product->get_price_html(); ?> </strong>    -->
                                 </p>
                             </div>
                             <div class="curso__pay-button"> 

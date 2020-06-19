@@ -85,9 +85,22 @@
         <li class="courses-and-events__list__item col-12 col-lg-6">
           <div class="courses-and-events__list__card"> 
 
-       <?php if($product->get_stock_quantity() <= $product->get_low_stock_amount()  ) :  ?>
-            <span class="courses-and-events__list__card__badge">ÚLTIMAS VAGAS</span>
-       <?php endif; ?>
+
+          <?php if ($product->get_stock_status() == 'instock' ) : ?>
+              <?php if ( $product->get_stock_quantity() <= $product->get_low_stock_amount()) : ?>
+                <div class="curso__pay-badge">
+                    <span>ÚLTIMAS <?php echo $product->get_stock_quantity(); ?> VAGAS </span>
+                </div>
+              <?php endif ?>  
+
+
+              <?php if ( $product->get_stock_quantity() === 1 ) : ?>
+                <div class="curso__pay-badge">
+                  <span> ÚLTIMA VAGA </span> 
+                </div>
+              <?php endif ?>  
+               
+        <?php  endif ?>    
 
 
        <?php // echo $product->get_price_html() ?>

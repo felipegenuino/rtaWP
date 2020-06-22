@@ -161,8 +161,8 @@ table.dataTable tbody th, table.dataTable tbody td {
 .col-estado .col-text,
 .col-formacao .col-text { display: block}
 
-.container-datatables{ position:relative; overflow:hidden}
-.container-datatables--loading{ height:400px}
+.container-datatables{ position:relative; }
+.container-datatables--loading{ height:400px; overflow:hidden}
 
 .loading{
     position: absolute;

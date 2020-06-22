@@ -137,7 +137,7 @@ table.dataTable thead .sorting_asc {  color: #7a80dd; }
    
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-    background: linear-gradient(to bottom, #6c757d 0%, #17a2b8 100%);
+    background: linear-gradient(to bottom, var(--color-1) 0%, var(--color-2) 100%);
     border: none;
     color: #fff !important;
 }

@@ -817,6 +817,7 @@
     margin: 0;
     padding: 0;
   }
+ 
   .encontre-profissional_item.hidden{display: none; }
   .encontre-profissional_item{  background-color: #eee;  display: grid;
     grid-template-columns:  1fr;
@@ -826,21 +827,23 @@
   }
   .encontre-profissional_item span{  
     /* padding: 10px; */ 
-     display: flex; width: 100%; white-space: nowrap; overflow: hidden;  text-overflow: ellipsis;
+     display: block; width: 100%; white-space: nowrap; overflow: hidden;  text-overflow: ellipsis;
   }
   
   .encontre-profissional_item-name{font-size: 16px; font-weight: 600;  }  
-  .encontre-profissional_item-phone{ font-size: 16px; font-weight: 600;    }
-  .encontre-profissional_item-email{ font-size: 14px;   }
-  .encontre-profissional_item-state{ font-size: 14px;  }
-  .encontre-profissional_item-city{ font-size: 14px;  }
+  .encontre-profissional_item-phone{ font-size: 16px; font-weight: 600;  padding: 0 10px;   }
+  .encontre-profissional_item-email{ font-size: 14px;  padding: 0 10px; }
+  .encontre-profissional_item-state{ font-size: 14px; padding: 0 10px; }
+  .encontre-profissional_item-city{ font-size: 14px; padding: 0 10px; }
   
+  .encontre-profissional_item--error{ grid-template-columns: 1fr !important; text-align: center;}
+
   /* breackpoints*/
     @media (min-width: 768px) {
       .encontre-profissional_item{  grid-template-columns: 1fr 1fr; }
     }
     @media (min-width: 1200px) {
-      .encontre-profissional_item{  grid-template-columns: minmax(263px, 1fr) 1fr 1fr 1fr 1fr; }
+      .encontre-profissional_item{  grid-template-columns: 220px 150px 240px 140px 140px; }
     }
    
   

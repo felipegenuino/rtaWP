@@ -18,6 +18,8 @@ function rta_scripts() {
   wp_enqueue_style( 'rta-styleguide', get_template_directory_uri() . '/css/styleguide.css' );
   wp_enqueue_style( 'rta-font-roboto', "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" ); 
 
+ 
+
   // if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
   //   wp_enqueue_script( 'comment-reply' );
   // }
@@ -131,3 +133,60 @@ function modificar_thumbnail($img){
   return false;
 }
 add_filter('woocommerce_cart_item_thumbnail', 'modificar_thumbnail' );
+
+
+
+
+
+/**
+* filter translations, to replace some WooCommerce text with our own
+* @param string $translation the translated text
+* @param string $text the text before translation
+* @param string $domain the gettext domain for translation
+* @return string
+*/
+function wpse_77783_woo_bacs_ibn($translation, $text, $domain) {
+  if ($domain == 'woocommerce') {
+      switch ($text) {
+          case 'IBAN':
+              $translation = 'CNPJ';
+              break;
+
+          case 'BIC / Swift':
+              $translation = 'COD';
+              break;
+      }
+  }
+
+  return $translation;
+}
+
+add_filter('gettext', 'wpse_77783_woo_bacs_ibn', 10, 3);
+
+
+
+
+
+
+
+add_filter( 'woocommerce_get_price_html', 'wpa83367_price_html', 100, 2 );
+function wpa83367_price_html( $price, $product ){
+    return 'À vista1: ' . str_replace( '<ins>', ' À vista2: <ins>', $price );
+}
+
+ 
+
+
+
+
+add_filter( 'woocommerce_taxonomy_args_product_cat', 'custom_wc_taxonomy_label_product_cat' );
+function custom_wc_taxonomy_label_product_cat( $args ) {
+	$args['label'] = 'Formações';
+	$args['labels'] = array(
+        'name' 				=> 'Formação',
+        'singular_name' 	=> 'Formação',
+        'menu_name'			=> 'Formações'
+	);
+
+	return $args;
+}

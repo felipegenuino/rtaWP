@@ -107,7 +107,14 @@
 
                <div class="d-flex flex-column flex-md-row">
                   <div class="flex-grow-1 flex-column">
-                      <h3> <?php the_field('acf__curso-estado-uf') ?></h3>
+
+                  <h3>
+                  <?php if( get_field('acf__curso-online')  ) : ?>  
+                    Curso Online 
+                  <?php else:  ?>
+                    <?php the_field('acf__curso-estado-uf') ?>
+                  <?php endif; ?>  
+                     </h3>
 
                       <?php if( have_rows('acf__curso-data__repeater') ): ?>
                           <ul class="course__data-list">
@@ -129,7 +136,7 @@
                       <!-- <h5> Curso <?php //$terms = get_the_terms( $post->ID , 'formacao' ); foreach ( $terms as $term ) {   echo $term->name; }?> </h5> -->
  
                       <h5> Curso
-                      <?php $formacao = get_the_terms($post->ID, 'formacao');
+                      <?php $formacao = get_the_terms($post->ID, 'product_cat');
                         if ($formacao && !is_wp_error($formacao)) {
                             $formacao_names = array();
                             foreach ($formacao as $term)
@@ -137,7 +144,7 @@
                             ksort($formacao_names);
                             $formacaos = implode(" ", $formacao_names); 
                             echo    $formacaos;
-                        } ?> </h5>
+                        } ?>   </h5>
   
 
 	                </div>
@@ -198,5 +205,3 @@
     </div>
 
 </div>
-
-

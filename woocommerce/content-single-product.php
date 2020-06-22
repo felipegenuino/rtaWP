@@ -160,7 +160,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
                 
                     <p class="curso__pay-price">
                         <strong>Pague em até 12x</strong>
-                        <span>à vista <?php  echo $product->get_price_html(); ?></span>
+                        <span>  <?php  echo $product->get_price_html(); ?></span>
                     </p>
 					
 

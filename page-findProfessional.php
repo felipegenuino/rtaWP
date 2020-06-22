@@ -143,6 +143,10 @@ table.dataTable thead .sorting_asc {  color: #7a80dd; }
 }
 
 
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 15px 10px;
+}
+
 .col-name{ position: relative;  max-width: 230px; width: 230px !important;    } 
 .col-telefone{}
 .col-email{ max-width: 210px; width: 210px !important; }

@@ -19,7 +19,7 @@ get_header(); ?>
     <div class="col-12"> 
         <h1 class="ui-title ui-title--bottom-border ui-title--center">
             <span class="ui-title__label">Método RTA</span>
-            <span class="ui-title__text">  O Método Reequilibrio   <br> Toracoabdominal - RTA   </span> 
+            <span class="ui-title__text"> Método Reequilíbrio <br> Toracoabdomina  </span> 
         </h1> 
     </div> 
 </div>       

@@ -240,16 +240,33 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
                             <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-calendar.svg" alt="">
                         </div> <!-- // col-3 -->
                         <div class="col-sm-12 col-lg-6">
-                            <h4 class="course__content-title">Datas</h4>
+
+<?php if( have_rows('acf__curso-data__repeater') ): 
+$count = 0;
+   while( have_rows('acf__curso-data__repeater') ): the_row();  
+    $count ++;
+     endwhile; ?> 
+
+<h4 class="course__content-title"> <?php echo ($count >= 2) ? 'Datas' :  'Data';  ?> </h4>
+<?php endif; ?>
+
+
+                             
+                            
+
+   
                             <div class="course__content">
                                 
-                                <?php if( have_rows('acf__curso-data__repeater') ): ?>
+                                <?php  
+                                if( have_rows('acf__curso-data__repeater') ): ?>
                                     <ul class="course__data-list">
                                         <?php while( have_rows('acf__curso-data__repeater') ): the_row(); 
                                             // vars
                                             $data = get_sub_field('acf__curso-data');
                                             $hora = get_sub_field('acf__curso-hora');
-                                            $ano = get_sub_field('acf__curso-ano');  ?> 
+                                            $ano = get_sub_field('acf__curso-ano'); 
+                                            $cont ++;
+                                            ?> 
                                                 <li class="course__data-item">
                                                     <?php if( $data ): ?> <strong>  <?php echo $data; ?> </strong>   <?php endif; ?>
                                                     <?php if( $ano ): ?> de <?php echo $ano; ?> <?php endif; ?> 
@@ -257,8 +274,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
                                                 </li> 
                                         <?php endwhile; ?> 
                                     </ul> 
-                                <?php endif; ?>
-
+                                <?php endif; ?>  
                             </div>
 
                             <h4 class="course__content-title mt-4 ">Local</h4>

@@ -1007,11 +1007,24 @@
     border-radius: 50%;
     top: 6px; 
   }
-  
+
+.course__content .accordion{}
+.course__content .accordion .card{ }  
+.course__content .accordion .card-header{padding: 0;} 
+
+
+.course__content .accordion .card-header h2 button .badge a{ }
+.course__content .accordion .card-header h2 button .far{    margin-right: 10px;} 
+.course__content .accordion .card-body{ font-size: 14px;}
+.course__content .accordion .card-body ul {}
+.course__content .accordion .card-body ul li { font-size: 14px;  margin-bottom: 7px;}
+.course__content .accordion .card-body ul li ul {}
+.course__content .accordion .card-body ul li ul li{}
+
+
   .course__data-list{ list-style: none;  padding: 0; margin-top: 0 !important; padding-left: 0 !important;}
   .course__data-item{margin-bottom: 5px !important}
   .course__data-item::before{ display: none;}
-  
   
   .curso__pay{
     max-width: 450px;

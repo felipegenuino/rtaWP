@@ -18,9 +18,11 @@
              <?php $args = array(
                   'post_type' => 'artigos',
                   'posts_per_page'=> 3, 
-                  'orderby'  => array( 
-                      'ID' => 'DESC' ,
-                  ),
+                  // 'orderby'  => array( 
+                  //     'ID' => 'DESC' ,
+                  // ),
+                  'orderby' => 'rand',
+                  'order'    => 'DESC' 
                 ); ?>
                         <?php $loop = new WP_Query($args); ?>
                         <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>

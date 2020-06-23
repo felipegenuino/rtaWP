@@ -102,24 +102,54 @@ get_header(); ?>
 
 
 
- <div class="row justify-content-lg-center">   
-      <div class="col-12">
 
-      <h2 class="ui-title ui-title--bottom-border ui-title--center">
-        <span class="ui-title__text"> Artigos relacionados</span> 
-    </h2> 
+
+
+
+
+<?php 
+$artigosRelacionado = get_field('acf__artigos_relacionados');  
+if( $artigosRelacionado ): ?>
+<div class="row justify-content-lg-center">   
+    <div class="col-12">
+        <h2 class="ui-title ui-title--bottom-border ui-title--center">  <span class="ui-title__text"> Artigos relacionados</span>  </h2> 
+        <div class="artigos__cards">
+            <ul class="artigos__cards__list"> 
+                <?php foreach( $artigosRelacionado as $artigo ): ?> 
+                    <li class="artigos__cards__item" onclick="location.href='<?php echo get_permalink( $artigo->ID );  ?>'">
+                        <div class="artigos__cards__item__body">
+                            <h3><?php echo get_the_title( $artigo->ID ); ?></h3>
+                            <em>Escrito por</em> 
+                            <p> <?php the_field('acf__artigos_autores', $artigo->ID);?> </p> 
+                        </div>
+                        <div  class="artigos__cards__item__footer">
+                            <button type="button" class="btn btn-link btn-sm" onclick="location.href='<?php echo get_permalink( $artigo->ID );  ?>'"> <i class="fa fa-angle-right"></i> Saiba mais</button>
+                        </div>
+                    </li>  
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div> 
+</div> 
+<?php endif; ?> 
+
+
+
+
+<?php   if(!$artigosRelacionado) : ?>
+
+    <div class="row justify-content-lg-center">   
+    <div class="col-12">
+        <h2 class="ui-title ui-title--bottom-border ui-title--center">  <span class="ui-title__text"> Conheça outros artigos  </span>  </h2> 
 
 
         <div class="artigos__cards">
-          <ul class="artigos__cards__list">
-            
-
+          <ul class="artigos__cards__list">  
              <?php $args = array(
                   'post_type' => 'artigos',
                   'posts_per_page'=> 3, 
-                  'orderby'  => array( 
-                      'ID' => 'DESC' ,
-                  ),
+                  'orderby' => 'rand',
+                  'order'    => 'DESC' 
                 ); ?>
                         <?php $loop = new WP_Query($args); ?>
                         <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -138,22 +168,20 @@ get_header(); ?>
                           </div>
                         </li>
 
-                        <?php endwhile; ?>
-
-                        <?php else: ?>
-                            <h1>No posts here!</h1>
-                        <?php endif; ?>
-                        <?php wp_reset_postdata(); ?>
-
-
- 
+                        <?php endwhile; ?> 
+                        <?php  endif; ?>
+                        <?php wp_reset_postdata(); ?> 
           </ul> 
-        </div>
-      </div>
+        </div> 
 
-         
-  </div>
-</div>
+        </div>
+    </div> 
+<?php endif;    ?>
+
+  
+
+  
+</div> <!-- //container -->
 
 
 

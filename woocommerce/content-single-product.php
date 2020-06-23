@@ -160,7 +160,7 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
                 
                     <p class="curso__pay-price">
                         <strong>Pague em até 12x</strong>
-                        <span>  <?php  echo $product->get_price_html(); ?></span>
+                        <span> à vista  <?php echo $product->get_price_html(); ?></span>
                     </p>
 					
 
@@ -241,24 +241,18 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
                         </div> <!-- // col-3 -->
                         <div class="col-sm-12 col-lg-6">
 
-<?php if( have_rows('acf__curso-data__repeater') ): 
-$count = 0;
-   while( have_rows('acf__curso-data__repeater') ): the_row();  
-    $count ++;
-     endwhile; ?> 
+                            <?php if( have_rows('acf__curso-data__repeater') ): 
+                            $count = 0;
+                            while( have_rows('acf__curso-data__repeater') ): the_row();  
+                                $count ++;
+                                endwhile; ?> 
 
-<h4 class="course__content-title"> <?php echo ($count >= 2) ? 'Datas' :  'Data';  ?> </h4>
-<?php endif; ?>
+                            <h4 class="course__content-title"> <?php echo ($count >= 2) ? 'Datas' :  'Data';  ?> </h4>
+                            <?php endif; ?>
 
-
-                             
-                            
-
-   
-                            <div class="course__content">
-                                
-                                <?php  
-                                if( have_rows('acf__curso-data__repeater') ): ?>
+ 
+                            <div class="course__content"> 
+                                <?php if( have_rows('acf__curso-data__repeater') ): ?>
                                     <ul class="course__data-list">
                                         <?php while( have_rows('acf__curso-data__repeater') ): the_row(); 
                                             // vars
@@ -275,8 +269,7 @@ $count = 0;
                                         <?php endwhile; ?> 
                                     </ul> 
                                 <?php endif; ?>  
-                            </div>
-
+                            </div> 
                             <h4 class="course__content-title mt-4 ">Local</h4>
                             <div class="course__content">
                                 <strong><?php the_field('acf__curso-local') ?> </strong>   <br />
@@ -287,7 +280,7 @@ $count = 0;
 
 
 
-						<?php if ($product->get_stock_status() == 'instock' ) : ?>
+				 <?php if ($product->get_stock_status() == 'instock' ) : ?>
                     <div class="row justify-content-center mt-5">
                         <div class="col-sm-12 col-lg-8">
                     <section class="curso__pay curso__pay--full"> 
@@ -320,7 +313,66 @@ $count = 0;
                     </section> 
                     </div> <!-- // col-6 -->
                     </div> <!-- // row -->
-					<?php endif ?>
+                    <?php endif ?>
+                    
+
+
+                    
+
+<?php 
+$faqs = get_field('acf__curso-perquntas-frequentes');  
+if( $faqs ): ?>
+ 
+
+ <div class="row justify-content-center  mt-5">
+    <div class="col-12">
+            <h2 class="ui-title ui-title--bottom-border ui-title--center"> 
+                <span class="ui-title__text"> Perguntas  <span class="fw-l"> frequentes</span>    </span> 
+            </h2> 
+    </div> <!-- // col-12 -->
+</div>
+
+
+ <div class="row justify-content-center">
+    <!-- <div class="col-sm-12 col-lg-3">
+        <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-talk.svg" alt="">
+    </div>   -->
+    <div class="col-sm-12 col-lg-8">
+         
+        <div class="course__content">
+
+        <div class="accordion" id="accordionFaq"> 
+                <?php foreach( $faqs as $faq ): ?> 
+                    <?php // print_r( $faq); ?> 
+
+                    <div class="card">
+                        <div class="card-header" id="faq-heading-<?php echo $faq->ID ; ?>">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left d-flex align-items-center" type="button" data-toggle="collapse" data-target="#faq-collapse-<?php echo $faq->ID ; ?>" aria-expanded="true" aria-controls="faq-collapse-<?php echo $faq->ID ; ?>">
+                                <i class="far fa-dot-circle"></i>
+                                <?php echo get_the_title( $faq->ID ); ?>
+                                <?php echo edit_post_link('Editar', '<small class="badge badge-light ml-auto">', '</small>', $faq->ID); ?>
+                            </button> 
+                        </h2>
+                        </div>
+
+                        <div id="faq-collapse-<?php echo $faq->ID ; ?>" class="collapse" aria-labelledby="faq-heading-<?php echo $faq->ID ; ?>" data-parent="#accordionFaq">
+                        <div class="card-body">
+                                <?php echo  wpautop($faq->post_content); ?>
+                        </div>
+                        </div>
+                    </div> 
+                   
+                <?php endforeach; ?>
+                </div>
+        </div>
+    </div> <!-- // col-6 -->
+</div> <!-- // row -->
+
+<?php endif; ?> 
+
+
+                    
                     
  
                   </div> <!-- // container -->

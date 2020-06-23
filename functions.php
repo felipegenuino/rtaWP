@@ -189,4 +189,4 @@ function custom_wc_taxonomy_label_product_cat( $args ) {
 	);
 
 	return $args;
-}
+} 

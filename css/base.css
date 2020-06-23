@@ -35,6 +35,16 @@
   
   ::selection {  color: #fff; background: var(--color-3);}
   
+
+
+  .btn-primary:not(:disabled):not(.disabled).active, 
+  .btn-primary:not(:disabled):not(.disabled):active, 
+  .show>.btn-primary.dropdown-toggle{
+    background-color: #a00e6e;
+    border-color: #a00e6e;
+  }
+
+
   
   /* breackpoints*/
   /* @media (min-width: var(--breakpoint-small)) { }
@@ -368,7 +378,7 @@
     margin: 0 auto;
   } 
   
-  
+  .ui-footer__newslatter .input-group-append{    flex-direction: column;}
   
   /* breackpoints*/
   @media (min-width: 576px) { 
@@ -378,7 +388,7 @@
     .ui-footer__newslatter h2 {  font-size: 38px; }
     .ui-footer__newslatter form {  width: 560px; } 
     .ui-footer__newslatter input[type="email"] {  transform: translate(52px, 0px); padding-right: 110px;  margin-bottom: 0px;  } 
-    .ui-footer__newslatter .input-group-append  { transform: translate(-53px, 0px); width: auto;   z-index: 3; } 
+    .ui-footer__newslatter .input-group-append  { flex-direction: row; transform: translate(-53px, 0px); width: auto;   z-index: 3; } 
   }
   @media (min-width: 1200px) { 
   }
@@ -774,9 +784,13 @@
     margin-top: 50px;
     margin-bottom: 100px;
     border-radius: 12px;}
-  .artigo__download span{ font-weight: var(--type-light);}
+  .artigo__download span{ font-weight: var(--type-light); display: block;}
   .artigo__download strong{font-weight: var(--type-bold); text-transform: uppercase;}
   
+  @media (min-width: 768px) {
+    .artigo__download span{ display: inline;}
+  }
+
   .modal--download{}
   .modal--download .modal-dialog{}
   .modal--download .modal-header{  border-bottom: transparent;  padding: 40px 40px 20px 40px; }
@@ -1247,24 +1261,7 @@
     display: flex;
   }
   
-  /* Contact form 7 */
-  div.wpcf7-response-output {
-      margin: 2em 0.5em 1em;
-      padding: 0.2em 1em;
-      border: 2px solid #ff0000;
-  }
-  
-  div.wpcf7-mail-sent-ok { border: 2px solid #28a745!important; }
-  div.wpcf7-mail-sent-ng,
-  div.wpcf7-aborted { 	border: 2px solid #dc3545!important; }
-  div.wpcf7-spam-blocked { 	border: 2px solid #ffc107!important; }
-  div.wpcf7-validation-errors,
-  div.wpcf7-acceptance-missing { 	border: 2px solid #ffc107!important; }
-  .wpcf7-form-control-wrap { 	position: relative; }
-  span.wpcf7-not-valid-tip { color: #dc3545!important; font-size: 1em; 	font-weight: normal; 	display: block; }
-  .use-floating-validation-tip span.wpcf7-not-valid-tip { position: absolute; top: 20%; left: 20%; z-index: 100; border: 1px solid #dc3545!important; background: #fff; padding: .2em .8em;}
-  
-  
+ 
   
   
   

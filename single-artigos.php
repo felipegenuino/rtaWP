@@ -66,7 +66,7 @@ get_header(); ?>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Não quero ver o artigo</button>
-                        <button type="button" class="btn btn-primary rounded-pill ml-auto">Ver artigo</button>
+                        <a type="button" target="_blank" href="<?php the_field('acf__artigos_arquivo');?>" class="btn btn-primary rounded-pill ml-auto">Ver artigo</a>
                     </div>
                     </div>
                 </div>

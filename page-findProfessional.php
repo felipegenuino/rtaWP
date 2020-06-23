@@ -201,9 +201,9 @@ table.dataTable tbody th, table.dataTable tbody td {
                         <div class="row"> 
                             <div class="col-12">
                                 <h2 class="ui-title ui-title--bottom-border ui-title--center">
-                                        <span class="ui-title__label">CONHEÇA</span>
-                                        <span class="ui-title__text"> ENCONTRE UM PROFISSIONAL <br> 
-                                        <span class="fw-l">CERTIFICADO RTA</span> 
+                                <?php 
+                                    $tituloCustomizado = get_field('acf__profissional_titulo');
+                                    if( $tituloCustomizado ): echo $tituloCustomizado; endif; ?> 
                                 </h2> 
                             </div>
                         </div> 

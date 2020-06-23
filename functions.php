@@ -169,10 +169,10 @@ add_filter('gettext', 'wpse_77783_woo_bacs_ibn', 10, 3);
 
 
 
-add_filter( 'woocommerce_get_price_html', 'wpa83367_price_html', 100, 2 );
-function wpa83367_price_html( $price, $product ){
-    return 'À vista1: ' . str_replace( '<ins>', ' À vista2: <ins>', $price );
-}
+// add_filter( 'woocommerce_get_price_html', 'wpa83367_price_html', 100, 2 );
+// function wpa83367_price_html( $price, $product ){
+//     return 'À vista1: ' . str_replace( '<ins>', ' À vista2: <ins>', $price );
+// }
 
  
 

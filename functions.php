@@ -32,9 +32,7 @@ function rta_scripts() {
 }    
 add_action( 'wp_enqueue_scripts', 'rta_scripts' );
 
-
-
-
+ 
 
 //menu customizado
 function register_my_menus() {

@@ -237,7 +237,15 @@ add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_t
 
                     <div class="row justify-content-center mt-5">
                         <div class="col-sm-12 col-lg-3">
-                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-calendar.svg" alt="">
+
+                        <?php if( get_field('acf__curso-online')  ) : ?>  
+                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-online-2.svg" alt="">
+                        <?php else:  ?>
+                            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/images/course__graphic-calendar.svg" alt=""> 
+                        <?php endif; ?>  
+
+ 
+                            
                         </div> <!-- // col-3 -->
                         <div class="col-sm-12 col-lg-6">
 

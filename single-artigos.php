@@ -41,53 +41,24 @@ get_header(); ?>
                 while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
 
-                <a href="#" class="artigo__download btn btn-primary" type="button" data-toggle="modal" data-target="#modalDownload"> <span> Clique aqui para </span> <strong> visualizar artigo completo</strong> </a>
-                <!-- Modal -->
-                <div class="modal modal--download fade" id="modalDownload" tabindex="-1" role="dialog" aria-labelledby="modalDownloadLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header" > 
-                         <h5 class="modal-title" id="modalDownloadLabel">Preencha o formulário abaixo para <br/> visualizar o artigo completo</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body "> 
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputEmail1">Seu nome</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Seu nome">
-                            <small class="sr-only" id="nameHelp" class="form-text text-muted">Nome obrigatório</small>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputEmail1">Seu email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-                            <small class="sr-only" id="emailHelp" class="form-text text-muted">Email obrigatório</small>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Não quero ver o artigo</button>
-                        <a type="button" target="_blank" href="<?php the_field('acf__artigos_arquivo');?>" class="btn btn-primary rounded-pill ml-auto">Ver artigo</a>
-                    </div>
-                    </div>
-                </div>
-                </div>
-
+                <a href="<?php the_field('acf__artigos_arquivo');?>" target="_blank" class="artigo__download btn btn-primary" type="button">  <span> Clique aqui para </span> <strong> visualizar artigo completo</strong> </a>
+                
                 <div class="artigo__share d-none" >
-                <p class="artigo__share-text"><strong>Compartilhe</strong> esse artigo:</p>
-                <ul class="artigo__share-list">
-                    <li class="artigo__share-item artigo__share-item--linkedin">
-                        <a href="#" class="artigo__share-link"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-                    <li class="artigo__share-item artigo__share-item--facebook">
-                        <a href="#" class="artigo__share-link"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li class="artigo__share-item artigo__share-item--twitter">
-                        <a href="https://twitter.com/RtaMetodo" class="artigo__share-link"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li class="artigo__share-item artigo__share-item--whatsapp">
-                        <a href="" class="artigo__share-link"><i class="fab fa-whatsapp"></i></a>
-                    </li> 
-                </ul>
+                    <p class="artigo__share-text"><strong>Compartilhe</strong> esse artigo:</p>
+                    <ul class="artigo__share-list">
+                        <li class="artigo__share-item artigo__share-item--linkedin">
+                            <a href="#" class="artigo__share-link"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="artigo__share-item artigo__share-item--facebook">
+                            <a href="#" class="artigo__share-link"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="artigo__share-item artigo__share-item--twitter">
+                            <a href="https://twitter.com/RtaMetodo" class="artigo__share-link"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="artigo__share-item artigo__share-item--whatsapp">
+                            <a href="" class="artigo__share-link"><i class="fab fa-whatsapp"></i></a>
+                        </li> 
+                    </ul>
                 </div>
                 <?php  endwhile;  
             else :

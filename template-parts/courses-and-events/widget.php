@@ -110,7 +110,7 @@
 
                   <h3>
                   <?php if( get_field('acf__curso-online')  ) : ?>  
-                    Curso Online 
+                   <?php the_title() ;?>
                   <?php else:  ?>
                     <?php the_field('acf__curso-estado-uf') ?>
                   <?php endif; ?>  

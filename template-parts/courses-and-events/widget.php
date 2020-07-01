@@ -144,7 +144,11 @@
                             ksort($formacao_names);
                             $formacaos = implode(" ", $formacao_names); 
                             echo    $formacaos;
-                        } ?>   </h5>
+                        } ?> 
+                        
+                        <?php if( get_field('acf__curso-online')  ) : ?>ao vivo e online<?php endif; ?>  
+                        
+                          </h5>
   
 
 	                </div>

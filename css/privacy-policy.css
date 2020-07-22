@@ -12,8 +12,8 @@
     text-transform: uppercase;
 }
 
-.ui-title__text {  font-size: 24px;  }
+.privacy-policy .ui-title__text {  font-size: 24px;  }
 
 @media (min-width: 425px) {
-    .ui-title__text {  font-size: 30px;  }
+.privacy-policy   .ui-title__text {  font-size: 30px;  }
 }

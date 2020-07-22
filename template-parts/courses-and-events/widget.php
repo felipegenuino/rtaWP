@@ -46,10 +46,12 @@
   </div>
 
 
+<?php if ( is_post_type_archive('product')  ) : ?>
 
-  <div class="row"> 
-      <div class="col-6"> 
-      <ul class="nav nav-pills">
+
+  <div class="row d-flex align-items-center px-3  mt-5"> 
+      <div class="col-lg-6"> 
+      <ul class="nav nav-pills mb-2">
           <li class="nav-item">
             <a class="nav-link   " href="#">Todos</a>
           </li>
@@ -69,7 +71,7 @@
       </div>
 
       <div class="col-12 col-lg-4 ml-auto "> 
-        <div class="form-group">
+        <div class="form-group mb-2">
             <label for="inputSearch" class="sr-only sr-only-focusable">Pesquisar</label>
             <div class="ui-seach">
                 <input  data-search type="text" class="ui-seach-input form-control" id="inputSearch" aria-describedby="textHelp" placeholder="pesquisar">
@@ -81,7 +83,7 @@
      </div>  
 
   </div>
-
+  <?php  endif ?>    
 
 
     <div class="row"> 

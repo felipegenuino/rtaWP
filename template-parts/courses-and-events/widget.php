@@ -1,8 +1,8 @@
 <style>
   .courses-and-events__list{ padding: 0;  margin: 0; }
   .courses-and-events__list__item {  list-style: none; margin: 0;  }
-  .courses-and-events__list__item h3{ font-size: 24px; font-weight: var(--type-bold); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
-  .courses-and-events__list__item h4{font-size: 18px; font-weight: var(--type-bold); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+  .courses-and-events__list__item h3{ font-size: 24px; font-weight: var(--type-bold);    }
+  .courses-and-events__list__item h4{ font-size: 18px; font-weight: var(--type-bold); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
   .courses-and-events__list__item h5{ font-size: 18px; font-weight: var(--type-regular); color:#5D626D }
   .courses-and-events__list__card{
         border: 1px solid var(--color-7);
@@ -45,15 +45,47 @@
       </div>
   </div>
 
+
+
+  <div class="row"> 
+      <div class="col-6"> 
+      <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link   " href="#">Todos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Instrução</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Básico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Avançado</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="col-12 col-lg-4 ml-auto "> 
+        <div class="form-group">
+            <label for="inputSearch" class="sr-only sr-only-focusable">Pesquisar</label>
+            <div class="ui-seach">
+                <input  data-search type="text" class="ui-seach-input form-control" id="inputSearch" aria-describedby="textHelp" placeholder="pesquisar">
+                <button class="ui-seach-button ui-seach-button--default" title="Buscar"> </button>
+                <button type="reset" class="ui-seach-button ui-seach-button--close" title="limpar"> </button>
+            </div>
+            <!-- <small id="textHelp" class="form-text text-muted">Precisa de ajuda?<csmall> -->
+        </div>  
+     </div>  
+
+  </div>
+
+
+
     <div class="row"> 
-      <div class="col-12">
-
-
-      
-
-
-
-
+      <div class="col-12"> 
 
       <ul class="courses-and-events__list row justify-content-center">
  

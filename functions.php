@@ -23,12 +23,22 @@ function rta_scripts() {
   // if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
   //   wp_enqueue_script( 'comment-reply' );
   // }
+ 
+ 
 
   wp_enqueue_script( 'rta-jq', get_template_directory_uri() . '/js/jquery-3.3.1.js');
   wp_enqueue_script( 'rta-popper', get_template_directory_uri() . '/js/popper.min.js');
   wp_enqueue_script( 'rta-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js');
   wp_enqueue_script( 'rta-fontawesome',  'https://kit.fontawesome.com/66c5adcbe3.js');
   wp_enqueue_script( 'rta-main-js', get_template_directory_uri() . '/js/main.js');
+
+  if ( is_front_page()  ) {
+    wp_enqueue_script( 'rta-home-hero', get_template_directory_uri() . '/template-parts/hero/scripts.js');
+  };
+
+  if ( is_post_type_archive('artigos') ) {
+    wp_enqueue_script( 'rta-article-script', get_template_directory_uri() . '/template-parts/articles/scripts.js');
+  }; 
 }    
 add_action( 'wp_enqueue_scripts', 'rta_scripts' );
 
